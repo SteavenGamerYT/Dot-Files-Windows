@@ -4,13 +4,13 @@
 `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`
 
 ```
-mklink /d "C:\Users\omart\Documents\WindowsPowerShell" "C:\Users\omart\Documents\GitHub\Dot-Files-Windows\Documents\WindowsPowerShell"
+mklink /d "C:\Users\Omar Hany Kasban\Documents\WindowsPowerShell" "C:\Users\Omar Hany Kasban\Documents\GitHub\Dot-Files-Windows\Documents\WindowsPowerShell"
 
-mklink /d "C:\Users\omart\Documents\PowerShell" "C:\Users\omart\Documents\GitHub\Dot-Files-Windows\Documents\PowerShell"
+mklink /d "C:\Users\Omar Hany Kasban\Documents\PowerShell" "C:\Users\Omar Hany Kasban\Documents\GitHub\Dot-Files-Windows\Documents\PowerShell"
 
-mklink "C:\Users\omart\.config\starship.toml" "C:\Users\omart\Documents\GitHub\Dot-Files-Windows\.config\starship.toml"
+mklink "C:\Users\Omar Hany Kasban\.config\starship.toml" "C:\Users\Omar Hany Kasban\Documents\GitHub\Dot-Files-Windows\.config\starship.toml"
 
-mklink "C:\Users\omart\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" "C:\Users\omart\OneDrive\Documents\GitHub\Dot-Files-Windows\AppData\local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
+mklink "C:\Users\Omar Hany Kasban\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" "C:\Users\Omar Hany Kasban\Documents\GitHub\Dot-Files-Windows\AppData\local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 
-mklink /d "C:\Users\omart\AppData\Roaming\BetterDiscord" "C:\Users\omart\Documents\GitHub\Dot-FileS-Windows\AppData\Roaming\BetterDiscord"
+mklink /d "C:\Users\Omar Hany Kasban\AppData\Roaming\BetterDiscord" "C:\Users\Omar Hany Kasban\Documents\GitHub\Dot-FileS-Windows\AppData\Roaming\BetterDiscord"
 ```
