@@ -39,7 +39,7 @@
             "font": 
             {
                 "face": "FiraCode Nerd Font Mono",
-                "size": 16.0
+                "size": 12.0
             }
         },
         "list": 
@@ -48,7 +48,7 @@
                 "colorScheme": "Campbell Powershell",
                 "font": 
                 {
-                    "size": 16.0
+                    "size": 12.0
                 },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
@@ -61,7 +61,7 @@
                 "font": 
                 {
                     "face": "FiraCode Nerd Font Mono",
-                    "size": 16.0
+                    "size": 12.0
                 },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,

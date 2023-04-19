@@ -34,3 +34,5 @@ function pkill($name) {
   Get-Process $name -ErrorAction SilentlyContinue | Stop-Process
 }
 function g { Set-Location $HOME\Documents\Github }
+
+New-Alias -Name neofetch -Value winfetch
