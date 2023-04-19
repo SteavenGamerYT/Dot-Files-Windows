@@ -9,8 +9,7 @@ $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
-function Get-ChildItemUnix {
-  Get-ChildItem $Args[0] |
-      Format-Table Mode, @{N='Owner';E={(Get-Acl $_.FullName).Owner}}, Length, LastWriteTime, @{N='Name';E={if($_.Target) {$_.Name+' -> '+$_.Target} else {$_.Name}}}
+function ll { Get-ChildItem -Path $pwd -File }
+function ix ($file) {
+  curl.exe -F "f:1=@$file" ix.io
 }
-New-Alias ll Get-ChildItemUnix
