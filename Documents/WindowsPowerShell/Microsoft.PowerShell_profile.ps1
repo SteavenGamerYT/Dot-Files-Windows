@@ -10,6 +10,17 @@ if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
 function ll { Get-ChildItem -Path $pwd -File }
+
 function ix ($file) {
   curl.exe -F "f:1=@$file" ix.io
+}
+
+function Get-PubIP {
+    (Invoke-WebRequest http://ifconfig.me/ip ).Content
+}
+
+function Git-Upload {
+  git add .
+  git commit -m "$args"
+  git push
 }
