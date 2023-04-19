@@ -8,4 +8,8 @@ Set-Location "C:\Users\Omar Hany Kasban"
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
+}function Get-ChildItemUnix {
+    Get-ChildItem $Args[0] |
+        Format-Table Mode, @{N='Owner';E={(Get-Acl $_.FullName).Owner}}, Length, LastWriteTime, @{N='Name';E={if($_.Target) {$_.Name+' -> '+$_.Target} else {$_.Name}}}
 }
+New-Alias ll Get-ChildItemUnix
