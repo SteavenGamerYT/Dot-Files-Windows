@@ -24,3 +24,13 @@ function Git-Upload {
   git commit -m "$args"
   git push
 }
+function touch($file) {
+  "" | Out-File $file -Encoding ASCII
+}
+function which($name) {
+  Get-Command $name | Select-Object -ExpandProperty Definition
+}
+function pkill($name) {
+  Get-Process $name -ErrorAction SilentlyContinue | Stop-Process
+}
+function g { Set-Location $HOME\Documents\Github }
