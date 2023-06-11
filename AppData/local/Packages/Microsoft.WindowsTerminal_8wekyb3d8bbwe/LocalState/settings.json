@@ -80,6 +80,18 @@
                 "hidden": false,
                 "name": "Fedora",
                 "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{833ba28c-ec42-552c-b567-6ee305051c7d}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{9d3a9ac8-a9f3-533d-b7b8-1913c3611124}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
