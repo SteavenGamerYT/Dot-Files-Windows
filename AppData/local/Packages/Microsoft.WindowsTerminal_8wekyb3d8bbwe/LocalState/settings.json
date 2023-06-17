@@ -76,22 +76,10 @@
                 "name": "Command Prompt"
             },
             {
-                "guid": "{aa8efdb5-3cbe-50b2-a332-9203dc1ee217}",
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
-                "name": "Fedora",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{833ba28c-ec42-552c-b567-6ee305051c7d}",
-                "hidden": false,
-                "name": "Developer Command Prompt for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{9d3a9ac8-a9f3-533d-b7b8-1913c3611124}",
-                "hidden": false,
-                "name": "Developer PowerShell for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
             }
         ]
     },
