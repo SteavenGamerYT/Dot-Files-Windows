@@ -62,6 +62,7 @@
                 "name": "Command Prompt"
             },
             {
+                "colorScheme": "Campbell Powershell",
                 "font": 
                 {
                     "face": "FiraCode Nerd Font Mono"
