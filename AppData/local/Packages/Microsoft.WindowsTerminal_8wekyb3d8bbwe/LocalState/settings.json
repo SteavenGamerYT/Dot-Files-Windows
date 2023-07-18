@@ -43,7 +43,7 @@
         "defaults": 
         {
             "backgroundImage": "desktopWallpaper",
-            "backgroundImageOpacity": 0.4,
+            "backgroundImageOpacity": 0.6,
             "font": 
             {
                 "face": "FiraCode Nerd Font Mono",
@@ -79,7 +79,7 @@
             },
             {
                 "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
-                "hidden": true,
+                "hidden": false,
                 "name": "Ubuntu-22.04",
                 "source": "Windows.Terminal.Wsl"
             }
