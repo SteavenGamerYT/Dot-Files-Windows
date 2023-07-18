@@ -42,6 +42,8 @@
     {
         "defaults": 
         {
+            "backgroundImage": "desktopWallpaper",
+            "backgroundImageOpacity": 0.4,
             "font": 
             {
                 "face": "FiraCode Nerd Font Mono",
