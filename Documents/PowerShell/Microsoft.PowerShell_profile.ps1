@@ -24,6 +24,11 @@ function Git-Upload {
   git commit -m "$args"
   git push
 }
+function git-push {
+  git add .
+  git commit -m "$args"
+  git push
+}
 function touch($file) {
   "" | Out-File $file -Encoding ASCII
 }
