@@ -42,15 +42,13 @@
     {
         "defaults": 
         {
-           // "backgroundImage": "desktopWallpaper",
-           // "backgroundImageOpacity": 0.6,
-            "useAcrylic": true,
-            "acrylicOpacity": 0.5,
             "font": 
             {
                 "face": "RobotoMono Nerd Font Mono",
                 "size": 12.0
-            }
+            },
+            "opacity": 50,
+            "useAcrylic": true
         },
         "list": 
         [
@@ -73,6 +71,24 @@
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
+            },
+            {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            },
+            {
+                "guid": "{66956ebc-9e55-5084-94d5-43258a6675e2}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{9918c8da-5ea8-5c82-a2e4-c973498e7a51}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
