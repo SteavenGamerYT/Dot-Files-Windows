@@ -42,8 +42,10 @@
     {
         "defaults": 
         {
-            "backgroundImage": "desktopWallpaper",
-            "backgroundImageOpacity": 0.6,
+//             "backgroundImage": "desktopWallpaper",
+          //  "backgroundImageOpacity": 0.6,
+            "useAcrylic": true,
+            "acrylicOpacity": 0.5,
             "font": 
             {
                 "face": "RobotoMono Nerd Font Mono",
