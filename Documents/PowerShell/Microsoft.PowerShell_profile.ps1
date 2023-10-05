@@ -257,7 +257,7 @@ function playmov {
 function playmp4 {
   Get-ChildItem -Filter *.mp4 | ForEach-Object { Start-Process -FilePath $_.FullName -Verb Open }
 }
-
+Remove-Item -Path alias:cp
 Set-Alias -Name cp -Value Copy-Item
 Set-Alias -Name mv -Value Move-Item
 Set-Alias -Name rm -Value Remove-Item
