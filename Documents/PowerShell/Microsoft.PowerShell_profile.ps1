@@ -81,37 +81,146 @@ Import-Module PSWriteColor
 # ll
 function ll {
   function Get-FolderSize($path) {
-    $size = 0
-    
-    Get-ChildItem $path -Force -ErrorAction SilentlyContinue | ForEach-Object {
-        if ($_.PSIsContainer) {
-            $size += Get-FolderSize $_.FullName
-        } else {
-            $size += $_.Length
-        }
-    }
-    
-    return $size
+      $size = 0
+
+      Get-ChildItem $path -Recurse -File -Force -ErrorAction SilentlyContinue | ForEach-Object {
+          $size += $_.Length
+      }
+
+      return $size
+  }
+
+  function Format-Size($size) {
+      $suffixes = "B", "KB", "MB", "GB", "TB"
+      $index = 0
+
+      while ($size -ge 1KB -and $index -lt $suffixes.Length) {
+          $size /= 1KB
+          $index++
+      }
+
+      return "{0:N2} {1}" -f $size, $suffixes[$index]
+  }
+
+  $currentPath = Get-Location
+
+  Get-ChildItem $currentPath -Force | ForEach-Object {
+      $item = $_
+      
+      if ($item.PSIsContainer) {
+          $mode = "d"
+          $size = Get-FolderSize $item.FullName
+          $colorMode = "Green"
+      } else {
+          $mode = "-"
+          $size = $item.Length
+          $colorMode = "White"
+      }
+
+      $time = $item.LastWriteTime.ToString("MMM dd, yyyy hh:mm tt")  # Example: Aug 20, 2022 03:25 PM
+      $formattedSize = Format-Size $size
+
+      Write-Host -NoNewline -ForegroundColor $colorMode ("{0}  " -f $item.Mode)
+      Write-Host -NoNewline $item.LastWriteTime
+      Write-Host -NoNewline -ForegroundColor Cyan ("  {0,12}" -f $formattedSize)
+      Write-Host -NoNewline "  "
+      Write-Host -NoNewline -ForegroundColor $colorMode ($item.Attributes + " ")
+      Write-Host -NoNewline "  "
+      Write-Host $item.Name
+  }
 }
 
-Get-ChildItem -Directory -Force | ForEach-Object {
-    $item = $_
-    $mode = $item.Mode
-    $size = Get-FolderSize $item.FullName
-    $time = $item.LastWriteTime.ToString("hh:mm tt")  # Format time as 12-hour clock
+# Create PowerShell functions for tar-like commands
 
-    $suffixes = "B", "KB", "MB", "GB", "TB"
-    $index = 0
-
-    while ($size -ge 1KB -and $index -lt $suffixes.Length) {
-        $size /= 1KB
-        $index++
-    }
-
-    Write-Color -Text $mode -ForegroundColor Green -NoNewline
-    Write-Color -Text " $time" -NoNewline
-    Write-Color -Text (" {0:N2} {1}" -f $size, $suffixes[$index]) -ForegroundColor Cyan -NoNewline
-    Write-Color -Text " " -NoNewline  # Add space after size
-    Write-Color -Text $item.Name
+function mktar {
+  param(
+      [Parameter(Position = 0, Mandatory = $true)]
+      [Alias("Path")]
+      [string[]]$SourcePath,
+      
+      [Parameter(Position = 1, Mandatory = $true)]
+      [Alias("DestinationPath")]
+      [string]$OutputPath
+  )
+  
+  Compress-Archive -Path $SourcePath -DestinationPath $OutputPath
 }
+
+function mkbz2 {
+  param(
+      [Parameter(Position = 0, Mandatory = $true)]
+      [Alias("Path")]
+      [string[]]$SourcePath,
+      
+      [Parameter(Position = 1, Mandatory = $true)]
+      [Alias("DestinationPath")]
+      [string]$OutputPath
+  )
+  
+  Compress-Archive -Path $SourcePath -DestinationPath $OutputPath -CompressionLevel Optimal
+}
+
+function mkgz {
+  param(
+      [Parameter(Position = 0, Mandatory = $true)]
+      [Alias("Path")]
+      [string[]]$SourcePath,
+      
+      [Parameter(Position = 1, Mandatory = $true)]
+      [Alias("DestinationPath")]
+      [string]$OutputPath
+  )
+  
+  Compress-Archive -Path $SourcePath -DestinationPath $OutputPath -CompressionLevel Optimal
+}
+
+function untar {
+  param(
+      [Parameter(Position = 0, Mandatory = $true)]
+      [Alias("Path")]
+      [string]$SourcePath
+  )
+  
+  Expand-Archive -Path $SourcePath
+}
+
+function unbz2 {
+  param(
+      [Parameter(Position = 0, Mandatory = $true)]
+      [Alias("Path")]
+      [string]$SourcePath,
+      
+      [Parameter(Position = 1, Mandatory = $true)]
+      [Alias("DestinationPath")]
+      [string]$OutputPath
+  )
+  
+  Expand-Archive -Path $SourcePath -DestinationPath $OutputPath
+}
+function unbz2 {
+  param(
+      [Parameter(Position = 0, Mandatory = $true)]
+      [Alias("Path")]
+      [string]$SourcePath,
+      
+      [Parameter(Position = 1)]
+      [Alias("DestinationPath")]
+      [string]$OutputPath = ".\"
+  )
+  
+  Expand-Archive -Path $SourcePath -DestinationPath $OutputPath
+}
+
+function ungz {
+  param(
+      [Parameter(Position = 0, Mandatory = $true)]
+      [Alias("Path")]
+      [string]$SourcePath,
+      
+      [Parameter(Position = 1)]
+      [Alias("DestinationPath")]
+      [string]$OutputPath = ".\"
+  )
+  
+  Expand-Archive -Path $SourcePath -DestinationPath $OutputPath
 }
