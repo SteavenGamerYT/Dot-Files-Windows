@@ -104,31 +104,49 @@ function ll {
 
   $currentPath = Get-Location
 
-  Get-ChildItem $currentPath -Force | ForEach-Object {
-      $item = $_
-      
+  $items = Get-ChildItem $currentPath -Force
+
+  $fileCount = 0
+  $folderCount = 0
+  $totalSize = 0
+
+  foreach ($item in $items) {
       if ($item.PSIsContainer) {
           $mode = "d"
-          $size = Get-FolderSize $item.FullName
-          $colorMode = "Green"
+          $folderCount++
       } else {
           $mode = "-"
-          $size = $item.Length
-          $colorMode = "White"
+          $fileCount++
       }
+
+      $size = if ($item.PSIsContainer) {
+          Get-FolderSize $item.FullName
+      } else {
+          $item.Length
+      }
+
+      $totalSize += $size
 
       $time = $item.LastWriteTime.ToString("MMM dd, yyyy hh:mm tt")  # Example: Aug 20, 2022 03:25 PM
       $formattedSize = Format-Size $size
 
-      Write-Host -NoNewline -ForegroundColor $colorMode ("{0}  " -f $item.Mode)
+      Write-Host -NoNewline -ForegroundColor Green ("{0}  " -f $item.Mode)
       Write-Host -NoNewline $item.LastWriteTime
       Write-Host -NoNewline -ForegroundColor Cyan ("  {0,12}" -f $formattedSize)
       Write-Host -NoNewline "  "
-      Write-Host -NoNewline -ForegroundColor $colorMode ($item.Attributes + " ")
+      Write-Host -NoNewline -ForegroundColor Green ($item.Attributes + " ")
       Write-Host -NoNewline "  "
       Write-Host $item.Name
   }
+
+  $formattedTotalSize = Format-Size $totalSize
+  
+  Write-Host ""
+  Write-Host -NoNewline -ForegroundColor DarkGray ("Total Files: {0}  " -f $fileCount)
+  Write-Host -NoNewline -ForegroundColor DarkGray ("Total Folders: {0}  " -f $folderCount)
+  Write-Host -NoNewline -ForegroundColor DarkGray ("Total Size: {0}" -f $formattedTotalSize)
 }
+
 
 # Create PowerShell functions for tar-like commands
 
