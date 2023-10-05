@@ -83,7 +83,7 @@ function ll {
   function Get-FolderSize($path) {
     $size = 0
     
-    Get-ChildItem $path -Force | ForEach-Object {
+    Get-ChildItem $path -Force -ErrorAction SilentlyContinue | ForEach-Object {
         if ($_.PSIsContainer) {
             $size += Get-FolderSize $_.FullName
         } else {
