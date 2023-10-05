@@ -242,3 +242,26 @@ function ungz {
   
   Expand-Archive -Path $SourcePath -DestinationPath $OutputPath
 }
+
+
+# Play video and audio files in current dir by type
+function playmp3 {
+  Get-ChildItem -Filter *.mp3 | ForEach-Object { Start-Process -FilePath $_.FullName -Verb Open }
+}
+function playavi {
+  Get-ChildItem -Filter *.avi | ForEach-Object { Start-Process -FilePath $_.FullName -Verb Open }
+}
+function playmov {
+  Get-ChildItem -Filter *.mov | ForEach-Object { Start-Process -FilePath $_.FullName -Verb Open }
+}
+function playmp4 {
+  Get-ChildItem -Filter *.mp4 | ForEach-Object { Start-Process -FilePath $_.FullName -Verb Open }
+}
+
+Set-Alias -Name cp -Value Copy-Item
+Set-Alias -Name mv -Value Move-Item
+Set-Alias -Name rm -Value Remove-Item
+Set-Alias -Name mkdir -Value New-Item
+Set-Alias -Name ps -Value Get-Process
+Set-Alias -Name ping -Value Test-Connection
+Set-Alias -Name less -Value Get-Content
