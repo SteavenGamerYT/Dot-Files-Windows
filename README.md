@@ -3,6 +3,13 @@
 
 `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`
 
+
+```
+Install-Module PSWriteColor -Force
+Install-Module PSColor -Force
+```
+
+
 ```
 rd /s /q  "C:\Users\Omar Hany Kasban\Documents\WindowsPowerShell"
 mkdr "C:\Users\Omar Hany Kasban\Documents\WindowsPowerShell"

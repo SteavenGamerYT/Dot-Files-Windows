@@ -1,0 +1,155 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">PSColor</S>
+      <Version N="Version">1.0.0.0</Version>
+      <S N="Type">Module</S>
+      <S N="Description">Provides basic color highlighting for files, services, select-string etc._x000D__x000A__x000D__x000A_For more information, check out: https://github.com/Davlind/PSColor</S>
+      <S N="Author">David Lindblad</S>
+      <S N="CompanyName">Davlind</S>
+      <S N="Copyright">(c) 2014 David Lindblad. All rights reserved.</S>
+      <DT N="PublishedDate">2016-03-02T12:05:44+02:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2023-10-06T00:13:56.9604761+03:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <Nil N="LicenseUri" />
+      <URI N="ProjectUri">https://github.com/Davlind/PSColor</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Color</S>
+          <S>Colour</S>
+          <S>File</S>
+          <S>Service</S>
+          <S>Select-String</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>New-CommandWrapper</S>
+                <S>CutString</S>
+                <S>Write-FileLength</S>
+                <S>Write-Color-LS</S>
+                <S>FileInfo</S>
+                <S>Write-Color-Service</S>
+                <S>ServiceController</S>
+                <S>MatchInfo</S>
+                <S>Write-Color-Process</S>
+                <S>ProcessInfo</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>New-CommandWrapper</S>
+                <S>CutString</S>
+                <S>Write-FileLength</S>
+                <S>Write-Color-LS</S>
+                <S>FileInfo</S>
+                <S>Write-Color-Service</S>
+                <S>ServiceController</S>
+                <S>MatchInfo</S>
+                <S>Write-Color-Process</S>
+                <S>ProcessInfo</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="7" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="7" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="7" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="8">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="9">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2014 David Lindblad. All rights reserved.</S>
+          <S N="description">Provides basic color highlighting for files, services, select-string etc._x000D__x000A__x000D__x000A_For more information, check out: https://github.com/Davlind/PSColor</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">27177</S>
+          <S N="downloadCount">27177</S>
+          <S N="packageSize">11313</S>
+          <S N="published">3/2/2016 12:05:44 PM +02:00</S>
+          <S N="created">3/2/2016 12:05:44 PM +02:00</S>
+          <S N="lastEdited">6/6/2016 1:16:02 PM +02:00</S>
+          <S N="lastUpdated">10/5/2023 9:10:47 PM +03:00</S>
+          <S N="tags">Color Colour File Service Select-String PSFunction_New-CommandWrapper PSCommand_New-CommandWrapper PSFunction_CutString PSCommand_CutString PSFunction_Write-FileLength PSCommand_Write-FileLength PSFunction_Write-Color-LS PSCommand_Write-Color-LS PSFunction_FileInfo PSCommand_FileInfo PSFunction_Write-Color-Service PSCommand_Write-Color-Service PSFunction_ServiceController PSCommand_ServiceController PSFunction_MatchInfo PSCommand_MatchInfo PSFunction_Write-Color-Process PSCommand_Write-Color-Process PSFunction_ProcessInfo PSCommand_ProcessInfo PSIncludes_Function</S>
+          <S N="title">PSColor</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2023-10-05T21:10:47Z</S>
+          <S N="NormalizedVersion">1.0.0</S>
+          <S N="Authors">David Lindblad</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">PSColor.nuspec|FileInfo.ps1|MatchInfo.ps1|ProcessInfo.ps1|PsColor.psd1|PSColor.psm1|PSColorHelper.ps1|ServiceController.ps1</S>
+          <S N="GUID">f521f5dc-fd57-4b62-ade3-cba7b4e3fafe</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Omar Hany Kasban\Documents\PowerShell\Modules\PSColor\1.0.0.0</S>
+    </MS>
+  </Obj>
+</Objs>

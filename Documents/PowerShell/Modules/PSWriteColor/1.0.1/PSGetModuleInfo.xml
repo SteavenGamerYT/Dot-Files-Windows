@@ -1,0 +1,146 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">PSWriteColor</S>
+      <Version N="Version">1.0.1</Version>
+      <S N="Type">Module</S>
+      <S N="Description">Write-Color is a wrapper around Write-Host allowing you to create nice looking scripts, with colorized output. It provides easy manipulation of colors, logging output to file (log) and nice formatting options out of the box.</S>
+      <S N="Author">Przemyslaw Klys</S>
+      <S N="CompanyName">Przemyslaw.Klys</S>
+      <S N="Copyright">(c) 2011 - 2023 Przemyslaw Klys @ Evotec. All rights reserved.</S>
+      <DT N="PublishedDate">2023-04-30T17:27:50+03:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2023-10-06T00:17:33.2673484+03:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <Nil N="LicenseUri" />
+      <URI N="ProjectUri">https://github.com/EvotecIT/PSWriteColor</URI>
+      <URI N="IconUri">https://evotec.xyz/wp-content/uploads/2018/10/PSWriteColor.png</URI>
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Write-Host</S>
+          <S>Color</S>
+          <S>Colour</S>
+          <S>Terminal</S>
+          <S>Console</S>
+          <S>Logging</S>
+          <S>Prompt</S>
+          <S>Write-Color</S>
+          <S>Windows</S>
+          <S>MacOS</S>
+          <S>Linux</S>
+          <S>PSModule</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSEdition_Core</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Write-Color</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Write-Color</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="8">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="9">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2011 - 2023 Przemyslaw Klys @ Evotec. All rights reserved.</S>
+          <S N="description">Write-Color is a wrapper around Write-Host allowing you to create nice looking scripts, with colorized output. It provides easy manipulation of colors, logging output to file (log) and nice formatting options out of the box.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">127102</S>
+          <S N="downloadCount">429323</S>
+          <S N="packageSize">23140</S>
+          <S N="published">4/30/2023 5:27:50 PM +03:00</S>
+          <S N="created">4/30/2023 5:27:50 PM +03:00</S>
+          <S N="lastUpdated">10/5/2023 9:15:47 PM +03:00</S>
+          <S N="tags">Write-Host Color Colour Terminal Console Logging Prompt Write-Color Windows MacOS Linux PSModule PSEdition_Desktop PSEdition_Core PSFunction_Write-Color PSCommand_Write-Color PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2023-10-05T21:15:47Z</S>
+          <S N="NormalizedVersion">1.0.1</S>
+          <S N="Authors">Przemyslaw Klys</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">PSWriteColor.nuspec|PSWriteColor.psd1|PSWriteColor.psm1</S>
+          <S N="GUID">0b0ba5c5-ec85-4c2b-a718-874e55a8bc3f</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="CompanyName">Evotec</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Omar Hany Kasban\Documents\PowerShell\Modules\PSWriteColor\1.0.1</S>
+    </MS>
+  </Obj>
+</Objs>
