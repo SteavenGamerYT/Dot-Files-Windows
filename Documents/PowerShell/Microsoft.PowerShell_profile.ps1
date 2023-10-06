@@ -203,8 +203,7 @@ function mkrar {
       [string]$OutputPath
   )
   
-  $OutputPathWithExtension = $OutputPath + ".rar"
-  7z a -r $OutputPathWithExtension $SourcePath
+  7z a -r $OutputPath $SourcePath
 }
 
 
