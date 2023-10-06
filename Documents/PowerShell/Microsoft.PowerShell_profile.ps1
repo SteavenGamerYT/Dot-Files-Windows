@@ -70,7 +70,7 @@ function yta-wav($name) {
 function ytv-best($name) {
   yt-dlp -f bestvideo+bestaudio --embed-metadata --embed-thumbnail --embed-chapters $name
 }
-function youtube-download($name) {
+function ytv-best-mp4($name) {
   yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" --embed-metadata --embed-thumbnail --embed-chapters $name
 }
 # bat-cat
