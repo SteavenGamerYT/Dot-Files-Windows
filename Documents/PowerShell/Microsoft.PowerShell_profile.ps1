@@ -203,88 +203,89 @@ function mkrar {
       [string]$OutputPath
   )
   
-  7z a -r $OutputPath $SourcePath
+  $OutputPathWithExtension = $OutputPath + ".rar"
+  7z a -r $OutputPathWithExtension $SourcePath
 }
 
 
 function untar {
-    param(
-        [Parameter(Position = 0, Mandatory = $true)]
-        [Alias("Path")]
-        [string]$SourcePath,
-        
-        [Parameter(Position = 1)]
-        [Alias("DestinationPath")]
-        [string]$OutputPath = (Join-Path -Path (Split-Path -Path $SourcePath -Leaf) -ChildPath "")
-    )
-    
-    Expand-Archive -Path $SourcePath -DestinationPath $OutputPath
-  }
+  param(
+      [Parameter(Position = 0, Mandatory = $true)]
+      [Alias("Path")]
+      [string]$SourcePath,
+
+      [Parameter(Position = 1)]
+      [Alias("DestinationPath")]
+      [string]$OutputPath = (Join-Path -Path (Split-Path -Path $SourcePath -LeafBase) -ChildPath "")
+  )
+  
+  & 7z e $SourcePath -o$OutputPath
+}
 function unbz2 {
-    param(
-        [Parameter(Position = 0, Mandatory = $true)]
-        [Alias("Path")]
-        [string]$SourcePath,
-        
-        [Parameter(Position = 1)]
-        [Alias("DestinationPath")]
-        [string]$OutputPath = (Join-Path -Path (Split-Path -Path $SourcePath -Leaf) -ChildPath "")
-    )
-    
-    Expand-Archive -Path $SourcePath -DestinationPath $OutputPath
-  }
+  param(
+      [Parameter(Position = 0, Mandatory = $true)]
+      [Alias("Path")]
+      [string]$SourcePath,
+
+      [Parameter(Position = 1)]
+      [Alias("DestinationPath")]
+      [string]$OutputPath = (Join-Path -Path (Split-Path -Path $SourcePath -LeafBase) -ChildPath "")
+  )
+  
+  & 7z e $SourcePath -o$OutputPath
+}
 function unbz2 {
-    param(
-        [Parameter(Position = 0, Mandatory = $true)]
-        [Alias("Path")]
-        [string]$SourcePath,
-        
-        [Parameter(Position = 1)]
-        [Alias("DestinationPath")]
-        [string]$OutputPath = (Join-Path -Path (Split-Path -Path $SourcePath -Leaf) -ChildPath "")
-    )
-    
-    Expand-Archive -Path $SourcePath -DestinationPath $OutputPath
-  }
+  param(
+      [Parameter(Position = 0, Mandatory = $true)]
+      [Alias("Path")]
+      [string]$SourcePath,
+
+      [Parameter(Position = 1)]
+      [Alias("DestinationPath")]
+      [string]$OutputPath = (Join-Path -Path (Split-Path -Path $SourcePath -LeafBase) -ChildPath "")
+  )
+  
+  & 7z e $SourcePath -o$OutputPath
+}
 
 function ungz {
   param(
       [Parameter(Position = 0, Mandatory = $true)]
       [Alias("Path")]
       [string]$SourcePath,
-      
+
       [Parameter(Position = 1)]
       [Alias("DestinationPath")]
-      [string]$OutputPath = (Join-Path -Path (Split-Path -Path $SourcePath -Leaf) -ChildPath "")
+      [string]$OutputPath = (Join-Path -Path (Split-Path -Path $SourcePath -LeafBase) -ChildPath "")
   )
   
-  Expand-Archive -Path $SourcePath -DestinationPath $OutputPath
+  & 7z e $SourcePath -o$OutputPath
 }
 function unzip {
   param(
       [Parameter(Position = 0, Mandatory = $true)]
       [Alias("Path")]
       [string]$SourcePath,
-      
+
       [Parameter(Position = 1)]
       [Alias("DestinationPath")]
-      [string]$OutputPath = (Join-Path -Path (Split-Path -Path $SourcePath -Leaf) -ChildPath "")
+      [string]$OutputPath = (Join-Path -Path (Split-Path -Path $SourcePath -LeafBase) -ChildPath "")
   )
   
-  Expand-Archive -Path $SourcePath -DestinationPath $OutputPath
+  & 7z e $SourcePath -o$OutputPath
 }
 function unrar {
   param(
       [Parameter(Position = 0, Mandatory = $true)]
       [Alias("Path")]
       [string]$SourcePath,
-      
+
       [Parameter(Position = 1)]
       [Alias("DestinationPath")]
-      [string]$OutputPath = (Join-Path -Path (Split-Path -Path $SourcePath -Leaf) -ChildPath "")
+      [string]$OutputPath = (Join-Path -Path (Split-Path -Path $SourcePath -LeafBase) -ChildPath "")
   )
   
-  Expand-Archive -Path $SourcePath -DestinationPath $OutputPath
+  & 7z e $SourcePath -o$OutputPath
 }
 
 
