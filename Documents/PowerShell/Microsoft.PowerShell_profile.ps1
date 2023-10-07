@@ -305,7 +305,13 @@ Remove-Item -Path alias:cp
 Set-Alias -Name cp -Value Copy-Item
 Set-Alias -Name mv -Value Move-Item
 Set-Alias -Name rm -Value Remove-Item
-Set-Alias -Name mkdir -Value New-Item
+function mkdir {
+  param(
+      [string]$Path
+  )
+
+  New-Item -ItemType Directory -Path $Path
+}
 Set-Alias -Name ps -Value Get-Process
 Set-Alias -Name ping -Value Test-Connection
 Set-Alias -Name less -Value Get-Content
