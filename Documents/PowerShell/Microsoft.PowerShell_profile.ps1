@@ -73,6 +73,9 @@ function ytv-best($name) {
 function ytv-best-mp4($name) {
   yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" --embed-metadata --embed-thumbnail --embed-chapters $name
 }
+function ytv-best-mp4-1080p($name) {
+  yt-dlp -f "bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" --embed-metadata --embed-thumbnail --embed-chapters $name
+}
 # bat-cat
 Remove-Item -Path alias:cat
 New-Alias -Name cat -Value bat
