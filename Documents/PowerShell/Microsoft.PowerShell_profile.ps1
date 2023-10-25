@@ -151,7 +151,6 @@ function ll {
 
 
 # Create PowerShell functions for tar-like commands
-
 function mktar {
   param(
       [Parameter(Position = 0, Mandatory = $true)]
@@ -305,7 +304,9 @@ function playmp4 {
 }
 Remove-Item -Path alias:cp
 Set-Alias -Name cp -Value Copy-Item
+Remove-Item Alias:mv
 Set-Alias -Name mv -Value Move-Item
+Remove-Item Alias:rm
 Set-Alias -Name rm -Value Remove-Item
 function mkdir {
   param(
@@ -314,6 +315,7 @@ function mkdir {
 
   New-Item -ItemType Directory -Path $Path
 }
+Remove-Item Alias:ps
 Set-Alias -Name ps -Value Get-Process
 Set-Alias -Name ping -Value Test-Connection
 Set-Alias -Name less -Value Get-Content
