@@ -9,7 +9,6 @@ $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
-function ll { Get-ChildItem -Path $pwd -File }
 
 function ix ($file) {
   curl.exe -F "f:1=@$file" ix.io
