@@ -5,6 +5,7 @@
 
 
 ```
+winget install starship
 Install-Module PSWriteColor -Force
 Install-Module PSColor -Force
 ```
