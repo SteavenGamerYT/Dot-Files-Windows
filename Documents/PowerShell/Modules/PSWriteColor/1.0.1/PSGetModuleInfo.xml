@@ -15,7 +15,7 @@
       <S N="Copyright">(c) 2011 - 2023 Przemyslaw Klys @ Evotec. All rights reserved.</S>
       <DT N="PublishedDate">2023-04-30T17:27:50+03:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2023-10-06T00:17:33.2673484+03:00</DT>
+        <DT>2023-11-23T00:31:27.6932722+02:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -63,14 +63,14 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">DscResource</S>
+            <S N="Key">Workflow</S>
             <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Function</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
@@ -79,15 +79,7 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">Function</S>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="7">
               <TNRef RefId="2" />
               <LST>
@@ -96,7 +88,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Workflow</S>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
             <Ref N="Value" RefId="5" />
           </En>
         </DCT>
@@ -121,15 +121,15 @@
           <S N="requireLicenseAcceptance">False</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">127102</S>
-          <S N="downloadCount">429323</S>
+          <S N="versionDownloadCount">181110</S>
+          <S N="downloadCount">483555</S>
           <S N="packageSize">23140</S>
           <S N="published">4/30/2023 5:27:50 PM +03:00</S>
           <S N="created">4/30/2023 5:27:50 PM +03:00</S>
-          <S N="lastUpdated">10/5/2023 9:15:47 PM +03:00</S>
+          <S N="lastUpdated">11/22/2023 10:28:04 PM +02:00</S>
           <S N="tags">Write-Host Color Colour Terminal Console Logging Prompt Write-Color Windows MacOS Linux PSModule PSEdition_Desktop PSEdition_Core PSFunction_Write-Color PSCommand_Write-Color PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2023-10-05T21:15:47Z</S>
+          <S N="updated">2023-11-22T22:28:04Z</S>
           <S N="NormalizedVersion">1.0.1</S>
           <S N="Authors">Przemyslaw Klys</S>
           <S N="IsPrerelease">false</S>

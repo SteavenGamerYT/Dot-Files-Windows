@@ -15,7 +15,7 @@
       <S N="Copyright">(c) 2014 David Lindblad. All rights reserved.</S>
       <DT N="PublishedDate">2016-03-02T12:05:44+02:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2023-10-06T00:13:56.9604761+03:00</DT>
+        <DT>2023-11-23T00:31:33.7255642+02:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -54,25 +54,14 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
+            <S N="Key">Workflow</S>
             <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
-              <LST>
-                <S>New-CommandWrapper</S>
-                <S>CutString</S>
-                <S>Write-FileLength</S>
-                <S>Write-Color-LS</S>
-                <S>FileInfo</S>
-                <S>Write-Color-Service</S>
-                <S>ServiceController</S>
-                <S>MatchInfo</S>
-                <S>Write-Color-Process</S>
-                <S>ProcessInfo</S>
-              </LST>
+              <LST />
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Function</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
@@ -90,23 +79,34 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Workflow</S>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="7">
               <TNRef RefId="2" />
-              <LST />
+              <LST>
+                <S>New-CommandWrapper</S>
+                <S>CutString</S>
+                <S>Write-FileLength</S>
+                <S>Write-Color-LS</S>
+                <S>FileInfo</S>
+                <S>Write-Color-Service</S>
+                <S>ServiceController</S>
+                <S>MatchInfo</S>
+                <S>Write-Color-Process</S>
+                <S>ProcessInfo</S>
+              </LST>
             </Obj>
           </En>
           <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
             <S N="Key">Cmdlet</S>
-            <Ref N="Value" RefId="7" />
+            <Ref N="Value" RefId="5" />
           </En>
           <En>
             <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="7" />
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="7" />
+            <Ref N="Value" RefId="5" />
           </En>
         </DCT>
       </Obj>
@@ -130,17 +130,17 @@
           <S N="requireLicenseAcceptance">False</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">27177</S>
-          <S N="downloadCount">27177</S>
+          <S N="versionDownloadCount">27473</S>
+          <S N="downloadCount">27473</S>
           <S N="packageSize">11313</S>
           <S N="published">3/2/2016 12:05:44 PM +02:00</S>
           <S N="created">3/2/2016 12:05:44 PM +02:00</S>
           <S N="lastEdited">6/6/2016 1:16:02 PM +02:00</S>
-          <S N="lastUpdated">10/5/2023 9:10:47 PM +03:00</S>
+          <S N="lastUpdated">11/22/2023 8:03:00 PM +02:00</S>
           <S N="tags">Color Colour File Service Select-String PSFunction_New-CommandWrapper PSCommand_New-CommandWrapper PSFunction_CutString PSCommand_CutString PSFunction_Write-FileLength PSCommand_Write-FileLength PSFunction_Write-Color-LS PSCommand_Write-Color-LS PSFunction_FileInfo PSCommand_FileInfo PSFunction_Write-Color-Service PSCommand_Write-Color-Service PSFunction_ServiceController PSCommand_ServiceController PSFunction_MatchInfo PSCommand_MatchInfo PSFunction_Write-Color-Process PSCommand_Write-Color-Process PSFunction_ProcessInfo PSCommand_ProcessInfo PSIncludes_Function</S>
           <S N="title">PSColor</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2023-10-05T21:10:47Z</S>
+          <S N="updated">2023-11-22T20:03:00Z</S>
           <S N="NormalizedVersion">1.0.0</S>
           <S N="Authors">David Lindblad</S>
           <S N="IsPrerelease">false</S>
