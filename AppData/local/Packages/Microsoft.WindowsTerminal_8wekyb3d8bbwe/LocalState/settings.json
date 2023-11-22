@@ -16,10 +16,6 @@
             "keys": "ctrl+v"
         },
         {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
             "command": 
             {
                 "action": "splitPane",
@@ -27,6 +23,10 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
         }
     ],
     "copyFormatting": "none",
@@ -73,13 +73,13 @@
                 "name": "Command Prompt"
             },
             {
-                "guid": "{5d019834-bdcd-5229-894b-b0404ba5ed43}",
+                "guid": "{47d2c7ea-e007-59ff-99cd-27641a376b6e}",
                 "hidden": false,
                 "name": "Developer Command Prompt for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{0015a813-5e3f-5ffe-a0af-0e157a3f811c}",
+                "guid": "{5d52b616-215d-5915-84a1-6dee42034150}",
                 "hidden": false,
                 "name": "Developer PowerShell for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
