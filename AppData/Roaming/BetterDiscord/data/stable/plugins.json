@@ -1,12 +1,13 @@
 {
     "BDFDB": true,
-    "ZeresPluginLibrary": false,
+    "ZeresPluginLibrary": true,
     "FreeEmojis": true,
-    "NoSpotifyPause": true,
-    "NotificationSounds": true,
-    "SpotifyControls": true,
-    "SpotifyListenAlong": true,
-    "TypingIndicator": true,
-    "TypingUsersAvatars": true,
-    "BugReportHelper": false
+    "NoSpotifyPause": false,
+    "NotificationSounds": false,
+    "SpotifyControls": false,
+    "SpotifyListenAlong": false,
+    "TypingIndicator": false,
+    "TypingUsersAvatars": false,
+    "BugReportHelper": false,
+    "SplitLargeMessages": true
 }
