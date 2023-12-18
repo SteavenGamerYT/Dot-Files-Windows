@@ -565,6 +565,7 @@ img:not([src]), img[src=""], img[src="null"] {
 [REPLACE_CLASS_selectwrapper] [REPLACE_CLASS_select] {
 	flex: 1 1 auto;
 }
+[REPLACE_CLASS_selectwrapper] [REPLACE_CLASS_selectouter],
 [REPLACE_CLASS_selectwrapper] [REPLACE_CLASS_selectsearchinput] {
 	width: 100%;
 }
@@ -1061,7 +1062,7 @@ input[REPLACE_CLASS_input][REPLACE_CLASS_inputerror] {
 	border-top: unset;
 	border-bottom: 1px solid hsla(0,0%,100%,.1);
 }
-[REPLACE_CLASS_modalwrapper] [REPLACE_CLASS_tabbarcontainer] {
+[REPLACE_CLASS_modal] [REPLACE_CLASS_tabbarcontainer] {
 	background: rgba(0, 0, 0, 0.1);
 	border: none;
 	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
@@ -1069,7 +1070,7 @@ input[REPLACE_CLASS_input][REPLACE_CLASS_inputerror] {
 	margin: 0;
 	padding: 16px 16px 0 16px;
 }
-[REPLACE_CLASS_themedark] [REPLACE_CLASS_modalwrapper] [REPLACE_CLASS_tabbarcontainer] {
+[REPLACE_CLASS_themedark] [REPLACE_CLASS_modal] [REPLACE_CLASS_tabbarcontainer] {
 	background: rgba(0, 0, 0, 0.2);
 	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
 }
@@ -1129,7 +1130,7 @@ input[REPLACE_CLASS_input][REPLACE_CLASS_inputerror] {
 	pointer-events: none;
 }
 [REPLACE_CLASS__repomodalsettings] {
-    padding: 0 16px 16px 16px;
+	padding: 0 16px 16px 16px;
 }
 [REPLACE_CLASS__repochangelogbutton] {
 	position: fixed;
@@ -1157,6 +1158,13 @@ input[REPLACE_CLASS_input][REPLACE_CLASS_inputerror] {
 }
 [REPLACE_CLASS__repolistscroller] {
 	padding-top: 0;
+}
+[REPLACE_CLASS__repolistheader] [REPLACE_CLASS_tabbarcontainer] {
+	display: flex;
+	align-items: flex-start;
+}
+[REPLACE_CLASS__repolistheader] [REPLACE_CLASS_quickselectwrapper] {
+	line-height: 20px;
 }
 [REPLACE_CLASS__repoentry] [REPLACE_CLASS__repofooter] {
 	display: flex;
@@ -1260,6 +1268,9 @@ input[REPLACE_CLASS_input][REPLACE_CLASS_inputerror] {
 	padding-top: 4px;
 }
 
+[REPLACE_CLASS_tooltiprow]:has([REPLACE_CLASS_usersummarycontainer]:empty) {
+	display: none;
+}
 [REPLACE_CLASS_tooltipnote] {
 	color: var(--text-muted);
 	font-size: 11px;
@@ -1269,8 +1280,7 @@ input[REPLACE_CLASS_input][REPLACE_CLASS_inputerror] {
 [REPLACE_CLASS_tooltiplistitem][REPLACE_CLASS_tooltipcustom] {
 	color: #fff;
 }
-[REPLACE_CLASS_tooltip] [REPLACE_CLASS_tooltipcontent]:empty,
-[REPLACE_CLASS_tooltip] [REPLACE_CLASS_tooltipcontent]:empty > * {
+[REPLACE_CLASS_tooltip]:has([REPLACE_CLASS_tooltipcontent]:empty) {
 	display: none !important;
 }
 [REPLACE_CLASS_tooltip][REPLACE_CLASS_tooltipcustom] [REPLACE_CLASS_tooltipnote],

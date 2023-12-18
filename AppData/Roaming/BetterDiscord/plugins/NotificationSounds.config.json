@@ -269,6 +269,96 @@
 				"sound": "---",
 				"streamMute": false,
 				"volume": 100
+			},
+			"activities-rocket-time": {
+				"category": "---",
+				"focus": false,
+				"invisibleMute": false,
+				"mute": false,
+				"sound": "---",
+				"streamMute": false,
+				"volume": 100
+			},
+			"activity_end": {
+				"category": "---",
+				"focus": false,
+				"invisibleMute": false,
+				"mute": false,
+				"sound": "---",
+				"streamMute": false,
+				"volume": 100
+			},
+			"activity_launch": {
+				"category": "---",
+				"focus": false,
+				"invisibleMute": false,
+				"mute": false,
+				"sound": "---",
+				"streamMute": false,
+				"volume": 100
+			},
+			"activity_user_join": {
+				"category": "---",
+				"focus": false,
+				"invisibleMute": false,
+				"mute": false,
+				"sound": "---",
+				"streamMute": false,
+				"volume": 100
+			},
+			"activity_user_left": {
+				"category": "---",
+				"focus": false,
+				"invisibleMute": false,
+				"mute": false,
+				"sound": "---",
+				"streamMute": false,
+				"volume": 100
+			},
+			"call_ringing_halloween": {
+				"category": "---",
+				"focus": false,
+				"invisibleMute": false,
+				"mute": null,
+				"sound": "---",
+				"streamMute": false,
+				"volume": 100
+			},
+			"call_ringing_snowsgiving": {
+				"category": "---",
+				"focus": false,
+				"invisibleMute": false,
+				"mute": null,
+				"sound": "---",
+				"streamMute": false,
+				"volume": 100
+			},
+			"clip_error": {
+				"category": "---",
+				"focus": false,
+				"invisibleMute": false,
+				"mute": false,
+				"sound": "---",
+				"streamMute": false,
+				"volume": 100
+			},
+			"clip_save": {
+				"category": "---",
+				"focus": false,
+				"invisibleMute": false,
+				"mute": false,
+				"sound": "---",
+				"streamMute": false,
+				"volume": 100
+			},
+			"hang_status_select": {
+				"category": "---",
+				"focus": false,
+				"invisibleMute": false,
+				"mute": false,
+				"sound": "---",
+				"streamMute": false,
+				"volume": 100
 			}
 		},
 		"volumes": {
