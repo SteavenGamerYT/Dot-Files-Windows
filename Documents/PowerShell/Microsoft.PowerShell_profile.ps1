@@ -1,5 +1,9 @@
 Invoke-Expression (&starship init powershell)
 Set-Location $env:USERPROFILE
+
+# Import Terminal Icons
+Import-Module -Name Terminal-Icons
+
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
 # Be aware that if you are missing these lines from your profile, tab completion
@@ -28,6 +32,10 @@ function git-push {
   git commit -m "$args"
   git push
 }
+function cdgit($name) {
+  Set-Location "$env:USERPROFILE\Documents\GitHub\$name"
+}
+
 function touch($file) {
   "" | Out-File $file -Encoding ASCII
 }
@@ -40,6 +48,9 @@ function pkill($name) {
 function g { Set-Location $HOME\Documents\Github }
 
 New-Alias -Name neofetch -Value winfetch
+function neofetch-2 {
+  winfetch -image "$env:USERPROFILE\Documents\GitHub\Dot-Files-Windows\.config\winfetch\yma3c89hgvob1.jpg"
+}
 
 # Youtube
 function yta-aac($name) {
@@ -319,3 +330,14 @@ Remove-Item Alias:ps
 Set-Alias -Name ps -Value Get-Process
 Set-Alias -Name ping -Value Test-Connection
 Set-Alias -Name less -Value Get-Content
+
+function Get-Uptime {
+  # Get the current system uptime
+  $uptime = (Get-CimInstance -ClassName Win32_OperatingSystem).LastBootUpTime
+  $uptime = (Get-Date) - $uptime
+
+  # Format the uptime in a readable way
+  $uptimeString = "{0} days, {1} hours, {2} minutes, {3} seconds" -f $uptime.Days, $uptime.Hours, $uptime.Minutes, $uptime.Seconds
+
+  return $uptimeString
+}
