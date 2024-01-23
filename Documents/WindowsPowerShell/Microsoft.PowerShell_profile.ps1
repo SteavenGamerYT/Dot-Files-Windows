@@ -341,3 +341,21 @@ function Get-Uptime {
 
   return $uptimeString
 }
+function df {
+  get-volume
+}
+function sed($file, $find, $replace) {
+  (Get-Content $file).replace("$find", $replace) | Set-Content $file
+}
+function which($name) {
+  Get-Command $name | Select-Object -ExpandProperty Definition
+}
+function export($name, $value) {
+  set-item -force -path "env:$name" -value $value;
+}
+function pkill($name) {
+  Get-Process $name -ErrorAction SilentlyContinue | Stop-Process
+}
+function pgrep($name) {
+  Get-Process $name
+}
