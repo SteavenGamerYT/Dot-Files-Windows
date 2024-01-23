@@ -29,4 +29,5 @@ mkdir "%USERPROFILE%\AppData\Roaming"
 mklink /d "%USERPROFILE%\AppData\Roaming\BetterDiscord" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\AppData\Roaming\BetterDiscord"
 rd /s /q "%USERPROFILE%\.config\winfetch"
 mklink /d "%USERPROFILE%\.config\winfetch" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\.config\winfetch"
+mklink /d "%USERPROFILE%\Documents\AutoHotkey" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\Documents\AutoHotkey"
 ```
