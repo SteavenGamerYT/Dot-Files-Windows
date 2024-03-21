@@ -61,7 +61,7 @@
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "commandline": "%SystemRoot%\\System32\\cmd.exe /c ssh omarhanykasban@192.168.1.109",
+                "commandline": "%SystemRoot%\\System32\\cmd.exe /c ssh omarhanykasban@192.168.1.14",
                 "guid": "{e6eba005-c264-4887-8aeb-75c6ab480db5}",
                 "hidden": false,
                 "icon": "C:\\Users\\Omar Hany Kasban\\Pictures\\Arch-linux-logo.png",
