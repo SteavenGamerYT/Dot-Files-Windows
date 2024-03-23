@@ -42,7 +42,7 @@
     {
         "defaults": 
         {
-            "colorScheme": "Catppuccin Mocha",
+            "colorScheme": "Nord",
             "font": 
             {
                 "face": "RobotoMono Nerd Font Mono",
@@ -54,7 +54,6 @@
         "list": 
         [
             {
-                "colorScheme": "Catppuccin Mocha",
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
@@ -68,7 +67,6 @@
                 "name": "Arch Linux (Host)"
             },
             {
-                "colorScheme": "Catppuccin Mocha",
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
@@ -91,6 +89,33 @@
     "schemes": 
     [
         {
+                "name": "Nord",
+          
+                "foreground": "#D8DEE9",
+                "background": "#2E3440",
+          
+                "selectionBackground": "#434C5E",
+                "cursorColor": "#81A1C1",
+          
+                "black": "#3B4252",
+                "red": "#BF616A",
+                "green": "#A3BE8C",
+                "yellow": "#EBCB8B",
+                "blue": "#81A1C1",
+                "purple": "#B48EAD",
+                "cyan": "#88C0D0",
+                "white": "#E5E9F0",
+          
+                "brightBlack": "#4C566A",
+                "brightRed": "#BF616A",
+                "brightGreen": "#A3BE8C",
+                "brightYellow": "#EBCB8B",
+                "brightBlue": "#81A1C1",
+                "brightPurple": "#B48EAD",
+                "brightCyan": "#8FBCBB",
+                "brightWhite": "#ECEFF4"
+              },
+              {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
             "blue": "#0037DA",
