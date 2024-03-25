@@ -21,3 +21,8 @@ return
 LAlt & CapsLock:: 
     Send, {LAlt Down}{LShift Down}{LShift Up}{LAlt Up}
 return
+
+; Define a hotkey for Win + z
+#z::
+Run explorer.exe
+return
