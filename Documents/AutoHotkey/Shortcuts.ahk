@@ -13,3 +13,11 @@ return
 return
 
 #IfWinActive
+
+
+#Persistent
+
+; Define a hotkey for Left Alt + Caps Lock
+LAlt & CapsLock:: 
+    Send, {LAlt Down}{LShift Down}{LShift Up}{LAlt Up}
+return
