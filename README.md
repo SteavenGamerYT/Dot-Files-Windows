@@ -1,6 +1,9 @@
 # Dot Files Windows
  My Dot Files From Windows 10
 
+
+![](https://github.com/SteavenGamerYT/dot-files-windows/blob/main/Screenshots/1.png?raw=true)
+
 `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`
 
 ```
@@ -30,4 +33,6 @@ mklink /d "%USERPROFILE%\AppData\Roaming\BetterDiscord" "%USERPROFILE%\Documents
 rd /s /q "%USERPROFILE%\.config\winfetch"
 mklink /d "%USERPROFILE%\.config\winfetch" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\.config\winfetch"
 mklink /d "%USERPROFILE%\Documents\AutoHotkey" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\Documents\AutoHotkey"
+rd /s /q "%USERPROFILE%\.glaze-wm"
+mklink /d "%USERPROFILE%\.glaze-wm" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\.glaze-wm"
 ```
