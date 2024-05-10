@@ -48,8 +48,8 @@ function pkill($name) {
 function g { Set-Location $HOME\Documents\Github }
 
 New-Alias -Name neofetch -Value winfetch
-function neofetch-2 {
-  winfetch -image "$env:USERPROFILE\Documents\GitHub\Dot-Files-Windows\.config\winfetch\yma3c89hgvob1.jpg"
+function neofetch-image {
+  winfetch -image "$env:USERPROFILE\Documents\GitHub\Dot-Files-Windows\.config\winfetch\Toad_Artwork_-_Super_Mario_3D_World.png"
 }
 
 # Youtube
