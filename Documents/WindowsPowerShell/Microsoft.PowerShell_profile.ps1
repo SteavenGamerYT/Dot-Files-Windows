@@ -359,3 +359,4 @@ function pkill($name) {
 function pgrep($name) {
   Get-Process $name
 }
+neofetch-image
