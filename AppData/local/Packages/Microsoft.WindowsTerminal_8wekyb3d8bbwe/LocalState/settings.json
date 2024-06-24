@@ -89,33 +89,6 @@
     "schemes": 
     [
         {
-                "name": "Nord",
-          
-                "foreground": "#D8DEE9",
-                "background": "#2E3440",
-          
-                "selectionBackground": "#434C5E",
-                "cursorColor": "#81A1C1",
-          
-                "black": "#3B4252",
-                "red": "#BF616A",
-                "green": "#A3BE8C",
-                "yellow": "#EBCB8B",
-                "blue": "#81A1C1",
-                "purple": "#B48EAD",
-                "cyan": "#88C0D0",
-                "white": "#E5E9F0",
-          
-                "brightBlack": "#4C566A",
-                "brightRed": "#BF616A",
-                "brightGreen": "#A3BE8C",
-                "brightYellow": "#EBCB8B",
-                "brightBlue": "#81A1C1",
-                "brightPurple": "#B48EAD",
-                "brightCyan": "#8FBCBB",
-                "brightWhite": "#ECEFF4"
-              },
-              {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
             "blue": "#0037DA",
@@ -183,6 +156,29 @@
             "selectionBackground": "#585B70",
             "white": "#BAC2DE",
             "yellow": "#F9E2AF"
+        },
+        {
+            "background": "#2E3440",
+            "black": "#3B4252",
+            "blue": "#81A1C1",
+            "brightBlack": "#4C566A",
+            "brightBlue": "#81A1C1",
+            "brightCyan": "#8FBCBB",
+            "brightGreen": "#A3BE8C",
+            "brightPurple": "#B48EAD",
+            "brightRed": "#BF616A",
+            "brightWhite": "#ECEFF4",
+            "brightYellow": "#EBCB8B",
+            "cursorColor": "#81A1C1",
+            "cyan": "#88C0D0",
+            "foreground": "#D8DEE9",
+            "green": "#A3BE8C",
+            "name": "Nord",
+            "purple": "#B48EAD",
+            "red": "#BF616A",
+            "selectionBackground": "#434C5E",
+            "white": "#E5E9F0",
+            "yellow": "#EBCB8B"
         },
         {
             "background": "#282C34",
