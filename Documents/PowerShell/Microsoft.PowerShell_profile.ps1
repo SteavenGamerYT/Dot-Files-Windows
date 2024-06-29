@@ -89,6 +89,19 @@ function ytv-best-mp4-1080p($name) {
 # bat-cat
 Remove-Item -Path alias:cat
 New-Alias -Name cat -Value bat
+
+# clear
+Remove-Item -Path alias:cls
+Remove-Item -Path alias:clear
+function clear {
+  Clear-Host
+  fastfetch
+}
+function cls {
+  Clear-Host
+  fastfetch
+}
+
 # Import the PSWriteColor module
 Import-Module PSWriteColor
 # ll
@@ -360,4 +373,4 @@ function pgrep($name) {
   Get-Process $name
 }
 
-neofetch-image
+fastfetch

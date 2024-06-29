@@ -8,17 +8,18 @@
 
 ```
 winget install starship
+winget install --id Fastfetch-cli.Fastfetch
 Install-Module PSWriteColor -Force
 Install-Module PSColor -Force
 Install-Module -Name Terminal-Icons -Repository PSGallery -Force
-scoop install meow
+scoop install meow bat
 ```
 
 ```
 rd /s /q "%USERPROFILE%\Documents\PowerShell"
 rd /s /q "%USERPROFILE%\Documents\WindowsPowerShell"
 mkdir "%USERPROFILE%\Documents\WindowsPowerShell"
-mklink /d "%USERPROFILE%\Documents\WindowsPowerShell" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\Documents\WindowsPowerShell"
+mklink /d "%USERPROFILE%\Documents\WindowsPowerShell" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\Documents\PowerShell"
 mklink /d "%USERPROFILE%\Documents\PowerShell" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\Documents\PowerShell"
 rd /s /q "%USERPROFILE%\.config\starship.toml"
 mkdir "%USERPROFILE%\.config"
@@ -32,6 +33,8 @@ mkdir "%USERPROFILE%\AppData\Roaming"
 mklink /d "%USERPROFILE%\AppData\Roaming\BetterDiscord" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\AppData\Roaming\BetterDiscord"
 rd /s /q "%USERPROFILE%\.config\winfetch"
 mklink /d "%USERPROFILE%\.config\winfetch" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\.config\winfetch"
+rd /s /q "%USERPROFILE%\.config\fastfetch"
+mklink /d "%USERPROFILE%\.config\fastfetch" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\.config\fastfetch"
 mklink /d "%USERPROFILE%\Documents\AutoHotkey" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\Documents\AutoHotkey"
 rd /s /q "%USERPROFILE%\.glaze-wm"
 mklink /d "%USERPROFILE%\.glaze-wm" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\.glaze-wm"
