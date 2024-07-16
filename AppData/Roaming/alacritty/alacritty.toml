@@ -1,0 +1,44 @@
+live_config_reload = true
+working_directory = "None"
+
+# Themes --
+import = [ 
+    "C:/Users/Omar Hany Kasban/AppData/Roaming/alacritty/nordic.toml", 
+    "C:/Users/Omar Hany Kasban/AppData/Roaming/alacritty/keybinds.toml" 
+]
+
+[window]
+title = "Alacritty"
+blur = true
+opacity = 0.9
+padding.x = 10
+padding.y = 10
+
+[window.dimensions]
+columns = 160
+lines = 80
+
+[cursor.style]
+shape= "Beam"
+blinking = "Never"
+
+[colors]
+#transparent_background_colors = true
+draw_bold_text_with_bright_colors = true
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+#glyph_offset = { x = 1, y = 0 }
+normal.family = "RobotoMono Nerd Font"
+normal.style = "Regular"
+size = 12.0
+
+[font.bold]
+family = "RobotoMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "RobotoMono Nerd Font"
+style = "Italic"

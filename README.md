@@ -37,5 +37,7 @@ rd /s /q "%USERPROFILE%\.config\fastfetch"
 mklink /d "%USERPROFILE%\.config\fastfetch" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\.config\fastfetch"
 mklink /d "%USERPROFILE%\Documents\AutoHotkey" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\Documents\AutoHotkey"
 rd /s /q "%USERPROFILE%\.glaze-wm"
-mklink /d "%USERPROFILE%\.glaze-wm" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\.glaze-wm"
+mklink /d "%USERPROFILE%\.glaze-wm" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\.glaze-wm"'
+rd /s /q "%APPDATA%\alacritty"
+mklink /d "%APPDATA%\alacritty" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\AppData\Roaming\alacritty"
 ```
