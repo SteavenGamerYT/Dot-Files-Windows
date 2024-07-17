@@ -14,6 +14,9 @@ opacity = 0.9
 padding.x = 10
 padding.y = 10
 
+[shell]
+program = "pwsh.exe"
+
 [window.dimensions]
 columns = 160
 lines = 80
