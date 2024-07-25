@@ -18,7 +18,6 @@ scoop install meow bat
 ```
 rd /s /q "%USERPROFILE%\Documents\PowerShell"
 rd /s /q "%USERPROFILE%\Documents\WindowsPowerShell"
-mkdir "%USERPROFILE%\Documents\WindowsPowerShell"
 mklink /d "%USERPROFILE%\Documents\WindowsPowerShell" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\Documents\PowerShell"
 mklink /d "%USERPROFILE%\Documents\PowerShell" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\Documents\PowerShell"
 rd /s /q "%USERPROFILE%\.config\starship.toml"
