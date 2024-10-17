@@ -14,6 +14,7 @@ My Dot Files From Windows 11
 ```
 winget install starship
 winget install --id Fastfetch-cli.Fastfetch
+winget install --id=hpjansson.Chafa
 Install-Module PSWriteColor -Force
 Install-Module PSColor -Force
 Install-Module -Name Terminal-Icons -Repository PSGallery -Force

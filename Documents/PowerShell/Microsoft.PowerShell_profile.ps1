@@ -373,4 +373,5 @@ function pgrep($name) {
   Get-Process $name
 }
 
+chafa --size=30x25 "C:\Users\Omar Hany Kasban\.config\fastfetch\toad.png"
 fastfetch
