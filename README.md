@@ -12,17 +12,22 @@ My Dot Files From Windows 11
 `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`
 
 ```
-choco install wget curl ffmpeg-full yt-dlp mpv.install -y
+choco install mpv.install -y
+winget install --id yt-dlp.yt-dlp
+winget install --id BtbN.FFmpeg.GPL.7.1
+winget install --id GNU.Wget2
+winget install --id cURL.cURL
 winget install --id Microsoft.PowerShell
 winget install --id Microsoft.WindowsTerminal
 winget install --id Git.Git
-winget install starship
+winget install --id Starship.Starship
 winget install --id Fastfetch-cli.Fastfetch
 winget install --id=hpjansson.Chafa
+winget install --id sharkdp.bat 
 Install-Module PSWriteColor -Force
 Install-Module PSColor -Force
 Install-Module -Name Terminal-Icons -Repository PSGallery -Force
-scoop install meow bat
+scoop install meow
 ```
 
 ```
