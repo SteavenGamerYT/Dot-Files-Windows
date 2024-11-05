@@ -95,10 +95,12 @@ Remove-Item -Path alias:cls
 Remove-Item -Path alias:clear
 function clear {
   Clear-Host
+  chafa --size=30x25 "C:\Users\Omar Hany Kasban\.config\fastfetch\toad.png"
   fastfetch
 }
 function cls {
   Clear-Host
+  chafa --size=30x25 "C:\Users\Omar Hany Kasban\.config\fastfetch\toad.png"
   fastfetch
 }
 
