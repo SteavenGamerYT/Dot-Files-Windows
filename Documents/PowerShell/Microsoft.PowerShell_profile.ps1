@@ -53,6 +53,12 @@ function neofetch-image {
 }
 
 # Youtube
+function yt-music-no-playlist($name) {
+  yt-dlp -f bestaudio --extract-audio --audio-format aac --embed-metadata --embed-thumbnail --audio-quality 0 --no-playlist $name
+}
+function yt-music($name) {
+  yt-dlp -f bestaudio --extract-audio --audio-format aac --embed-metadata --embed-thumbnail --audio-quality 0 $name
+}
 function yta-aac($name) {
   yt-dlp --extract-audio --audio-format aac --embed-metadata --embed-thumbnail $name
 }

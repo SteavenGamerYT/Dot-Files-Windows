@@ -13,8 +13,8 @@ My Dot Files From Windows 11
 
 ```
 choco install mpv.install -y
-winget install --id yt-dlp.yt-dlp
 winget install --id BtbN.FFmpeg.GPL.7.1
+winget install --id yt-dlp.yt-dlp
 winget install --id GNU.Wget2
 winget install --id cURL.cURL
 winget install --id Microsoft.PowerShell

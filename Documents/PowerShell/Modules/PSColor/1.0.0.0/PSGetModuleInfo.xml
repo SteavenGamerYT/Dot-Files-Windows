@@ -15,7 +15,7 @@
       <S N="Copyright">(c) 2014 David Lindblad. All rights reserved.</S>
       <DT N="PublishedDate">2016-03-02T12:05:44+02:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2024-06-23T04:02:46.5452558+03:00</DT>
+        <DT>2024-11-05T23:03:16.126456+02:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -54,8 +54,15 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
+            <S N="Key">Workflow</S>
             <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>New-CommandWrapper</S>
@@ -72,18 +79,19 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Workflow</S>
-            <Obj N="Value" RefId="6">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
             <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
+            <Ref N="Value" RefId="5" />
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
             <Obj N="Value" RefId="7">
               <TNRef RefId="2" />
               <LST>
@@ -99,14 +107,6 @@
                 <S>ProcessInfo</S>
               </LST>
             </Obj>
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Ref N="Value" RefId="6" />
           </En>
         </DCT>
       </Obj>
@@ -130,17 +130,17 @@
           <S N="requireLicenseAcceptance">False</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">33878</S>
-          <S N="downloadCount">33878</S>
+          <S N="versionDownloadCount">52882</S>
+          <S N="downloadCount">52882</S>
           <S N="packageSize">11313</S>
-          <S N="published">3/2/2016 12:05:44 PM +02:00</S>
-          <S N="created">3/2/2016 12:05:44 PM +02:00</S>
-          <S N="lastEdited">6/6/2016 1:16:02 PM +02:00</S>
-          <S N="lastUpdated">6/23/2024 12:14:32 AM +03:00</S>
+          <S N="published">02/03/2016 12:05:44 PM +02:00</S>
+          <S N="created">02/03/2016 12:05:44 PM +02:00</S>
+          <S N="lastEdited">06/06/2016 1:16:02 PM +02:00</S>
+          <S N="lastUpdated">05/11/2024 8:50:00 PM +02:00</S>
           <S N="tags">Color Colour File Service Select-String PSFunction_New-CommandWrapper PSCommand_New-CommandWrapper PSFunction_CutString PSCommand_CutString PSFunction_Write-FileLength PSCommand_Write-FileLength PSFunction_Write-Color-LS PSCommand_Write-Color-LS PSFunction_FileInfo PSCommand_FileInfo PSFunction_Write-Color-Service PSCommand_Write-Color-Service PSFunction_ServiceController PSCommand_ServiceController PSFunction_MatchInfo PSCommand_MatchInfo PSFunction_Write-Color-Process PSCommand_Write-Color-Process PSFunction_ProcessInfo PSCommand_ProcessInfo PSIncludes_Function</S>
           <S N="title">PSColor</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2024-06-23T00:14:32Z</S>
+          <S N="updated">2024-11-05T20:50:00Z</S>
           <S N="NormalizedVersion">1.0.0</S>
           <S N="Authors">David Lindblad</S>
           <S N="IsPrerelease">false</S>
@@ -149,7 +149,7 @@
           <S N="GUID">f521f5dc-fd57-4b62-ade3-cba7b4e3fafe</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Omar Hany Kasban\Documents\PowerShell\Modules\PSColor\1.0.0.0</S>
+      <S N="InstalledLocation">D:\Documents\PowerShell\Modules\PSColor\1.0.0.0</S>
     </MS>
   </Obj>
 </Objs>

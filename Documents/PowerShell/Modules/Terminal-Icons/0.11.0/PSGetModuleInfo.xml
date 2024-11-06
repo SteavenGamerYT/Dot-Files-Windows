@@ -15,7 +15,7 @@
       <S N="Copyright">(c) Brandon Olin. All rights reserved.</S>
       <DT N="PublishedDate">2023-07-06T04:55:30+03:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2024-06-23T04:02:49.577345+03:00</DT>
+        <DT>2024-11-05T23:03:20.4423127+02:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -55,8 +55,15 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
+            <S N="Key">Workflow</S>
             <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-TerminalIconsColorTheme</S>
@@ -75,18 +82,19 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Workflow</S>
-            <Obj N="Value" RefId="6">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
             <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
+            <Ref N="Value" RefId="5" />
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
             <Obj N="Value" RefId="7">
               <TNRef RefId="2" />
               <LST>
@@ -104,14 +112,6 @@
                 <S>Show-TerminalIconsTheme</S>
               </LST>
             </Obj>
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Ref N="Value" RefId="6" />
           </En>
         </DCT>
       </Obj>
@@ -136,15 +136,15 @@
           <S N="releaseNotes">https://raw.githubusercontent.com/devblackops/Terminal-Icons/master/CHANGELOG.md</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">786487</S>
-          <S N="downloadCount">1033887</S>
+          <S N="versionDownloadCount">2495398</S>
+          <S N="downloadCount">2743608</S>
           <S N="packageSize">127437</S>
-          <S N="published">7/6/2023 4:55:30 AM +03:00</S>
-          <S N="created">7/6/2023 4:55:30 AM +03:00</S>
-          <S N="lastUpdated">6/23/2024 12:59:33 AM +03:00</S>
+          <S N="published">06/07/2023 4:55:30 AM +03:00</S>
+          <S N="created">06/07/2023 4:55:30 AM +03:00</S>
+          <S N="lastUpdated">05/11/2024 9:00:00 PM +02:00</S>
           <S N="tags">Color Terminal Console NerdFonts Icon PSModule PSFunction_Add-TerminalIconsColorTheme PSCommand_Add-TerminalIconsColorTheme PSFunction_Add-TerminalIconsIconTheme PSCommand_Add-TerminalIconsIconTheme PSFunction_Format-TerminalIcons PSCommand_Format-TerminalIcons PSFunction_Get-TerminalIconsColorTheme PSCommand_Get-TerminalIconsColorTheme PSFunction_Get-TerminalIconsGlyphs PSCommand_Get-TerminalIconsGlyphs PSFunction_Get-TerminalIconsIconTheme PSCommand_Get-TerminalIconsIconTheme PSFunction_Get-TerminalIconsTheme PSCommand_Get-TerminalIconsTheme PSFunction_Invoke-TerminalIconsThemeMigration PSCommand_Invoke-TerminalIconsThemeMigration PSFunction_Remove-TerminalIconsTheme PSCommand_Remove-TerminalIconsTheme PSFunction_Set-TerminalIconsIcon PSCommand_Set-TerminalIconsIcon PSFunction_Set-TerminalIconsTheme PSCommand_Set-TerminalIconsTheme PSFunction_Show-TerminalIconsTheme PSCommand_Show-TerminalIconsTheme PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2024-06-23T00:59:33Z</S>
+          <S N="updated">2024-11-05T21:00:00Z</S>
           <S N="NormalizedVersion">0.11.0</S>
           <S N="Authors">Brandon Olin</S>
           <S N="IsPrerelease">false</S>
@@ -155,7 +155,7 @@
           <S N="CompanyName">Community</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Omar Hany Kasban\Documents\PowerShell\Modules\Terminal-Icons\0.11.0</S>
+      <S N="InstalledLocation">D:\Documents\PowerShell\Modules\Terminal-Icons\0.11.0</S>
     </MS>
   </Obj>
 </Objs>
