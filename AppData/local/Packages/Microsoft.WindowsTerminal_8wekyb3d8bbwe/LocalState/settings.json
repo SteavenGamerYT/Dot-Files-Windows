@@ -16,6 +16,10 @@
             "id": "User.paste"
         },
         {
+            "command": "find",
+            "id": "User.find"
+        },
+        {
             "command": 
             {
                 "action": "splitPane",
@@ -23,10 +27,6 @@
                 "splitMode": "duplicate"
             },
             "id": "User.splitPane.A6751878"
-        },
-        {
-            "command": "find",
-            "id": "User.find"
         }
     ],
     "copyFormatting": "none",
@@ -39,12 +39,12 @@
             "keys": "ctrl+c"
         },
         {
-            "id": "User.find",
-            "keys": "ctrl+shift+f"
-        },
-        {
             "id": "User.paste",
             "keys": "ctrl+v"
+        },
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
         },
         {
             "id": "User.splitPane.A6751878",
@@ -83,7 +83,7 @@
                 "guid": "{e6eba005-c264-4887-8aeb-75c6ab480db5}",
                 "hidden": false,
                 "icon": "C:\\Users\\Omar Hany Kasban\\Pictures\\Arch-linux-logo.png",
-                "name": "Arch Linux (Host)"
+                "name": "NixOS (Host)"
             },
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
@@ -150,6 +150,12 @@
                 "hidden": false,
                 "name": "PowerShell 7",
                 "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
+                "hidden": true,
+                "name": "Visual Studio Debug Console",
+                "source": "VSDebugConsole"
             }
         ]
     },
