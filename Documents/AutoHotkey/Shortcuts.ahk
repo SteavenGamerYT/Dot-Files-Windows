@@ -10,7 +10,7 @@ return
 Run, powershell.exe -Command "& {Start-Process wt.exe -Verb RunAs}"
 return
 #b:: ; Win + B
-Run, "C:\Program Files\Google\Chrome\Application\chrome.exe"
+Run, "C:\Program Files\LibreWolf\librewolf.exe"
 return
 
 #IfWinActive
