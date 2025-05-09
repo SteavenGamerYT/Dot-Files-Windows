@@ -19,15 +19,12 @@ winget install --id GNU.Wget2
 winget install --id cURL.cURL
 winget install --id Microsoft.PowerShell
 winget install --id Microsoft.WindowsTerminal
-winget install --id Git.Git
 winget install --id Starship.Starship
-choco install fastfetch
-scoop install chafa
-choco install bat
+choco install fastfetch bat
+scoop install chafa meow git
 Install-Module PSWriteColor -Force
 Install-Module PSColor -Force
 Install-Module -Name Terminal-Icons -Repository PSGallery -Force
-scoop install meow
 ```
 
 ```

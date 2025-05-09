@@ -1,0 +1,187 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">PSWindowsUpdate</S>
+      <S N="Version">2.2.1.5</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
+      <S N="Description">This module contain cmdlets to manage Windows Update Client.</S>
+      <S N="Author">Michal Gajda</S>
+      <S N="CompanyName">Michal Gajda</S>
+      <S N="Copyright">(c) 2011-2024 Michal Gajda. All rights reserved.</S>
+      <DT N="PublishedDate">2024-07-20T10:51:44.563</DT>
+      <DT N="InstalledDate">2025-05-09T14:51:26.6255866+03:00</DT>
+      <B N="IsPrerelease">false</B>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/mgajda83/PSWindowsUpdate/blob/main/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/mgajda83/PSWindowsUpdate</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="2">
+        <TN RefId="2">
+          <T>System.String[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Microsoft</S>
+          <S>Windows</S>
+          <S>Update</S>
+          <S>PSModule</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_Add-WUServiceManager</S>
+          <S>PSCommand_Add-WUServiceManager</S>
+          <S>PSCmdlet_Enable-WURemoting</S>
+          <S>PSCommand_Enable-WURemoting</S>
+          <S>PSCmdlet_Get-WindowsUpdate</S>
+          <S>PSCommand_Get-WindowsUpdate</S>
+          <S>PSCmdlet_Get-WUApiVersion</S>
+          <S>PSCommand_Get-WUApiVersion</S>
+          <S>PSCmdlet_Get-WUHistory</S>
+          <S>PSCommand_Get-WUHistory</S>
+          <S>PSCmdlet_Get-WUInstallerStatus</S>
+          <S>PSCommand_Get-WUInstallerStatus</S>
+          <S>PSCmdlet_Get-WUJob</S>
+          <S>PSCommand_Get-WUJob</S>
+          <S>PSCmdlet_Get-WULastResults</S>
+          <S>PSCommand_Get-WULastResults</S>
+          <S>PSCmdlet_Get-WURebootStatus</S>
+          <S>PSCommand_Get-WURebootStatus</S>
+          <S>PSCmdlet_Get-WUServiceManager</S>
+          <S>PSCommand_Get-WUServiceManager</S>
+          <S>PSCmdlet_Get-WUSettings</S>
+          <S>PSCommand_Get-WUSettings</S>
+          <S>PSCmdlet_Invoke-WUJob</S>
+          <S>PSCommand_Invoke-WUJob</S>
+          <S>PSCmdlet_Remove-WindowsUpdate</S>
+          <S>PSCommand_Remove-WindowsUpdate</S>
+          <S>PSCmdlet_Remove-WUServiceManager</S>
+          <S>PSCommand_Remove-WUServiceManager</S>
+          <S>PSCmdlet_Set-WUSettings</S>
+          <S>PSCommand_Set-WUSettings</S>
+          <S>PSCmdlet_Update-WUModule</S>
+          <S>PSCommand_Update-WUModule</S>
+          <S>PSCmdlet_Set-PSWUSettings</S>
+          <S>PSCommand_Set-PSWUSettings</S>
+          <S>PSCmdlet_Reset-WUComponents</S>
+          <S>PSCommand_Reset-WUComponents</S>
+          <S>PSCmdlet_Get-WUOfflineMSU</S>
+          <S>PSCommand_Get-WUOfflineMSU</S>
+          <S>PSIncludes_Cmdlet</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="3">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-WUServiceManager</S>
+                <S>Enable-WURemoting</S>
+                <S>Get-WindowsUpdate</S>
+                <S>Get-WUApiVersion</S>
+                <S>Get-WUHistory</S>
+                <S>Get-WUInstallerStatus</S>
+                <S>Get-WUJob</S>
+                <S>Get-WULastResults</S>
+                <S>Get-WURebootStatus</S>
+                <S>Get-WUServiceManager</S>
+                <S>Get-WUSettings</S>
+                <S>Invoke-WUJob</S>
+                <S>Remove-WindowsUpdate</S>
+                <S>Remove-WUServiceManager</S>
+                <S>Set-WUSettings</S>
+                <S>Update-WUModule</S>
+                <S>Set-PSWUSettings</S>
+                <S>Reset-WUComponents</S>
+                <S>Get-WUOfflineMSU</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-WUServiceManager</S>
+                <S>Enable-WURemoting</S>
+                <S>Get-WindowsUpdate</S>
+                <S>Get-WUApiVersion</S>
+                <S>Get-WUHistory</S>
+                <S>Get-WUInstallerStatus</S>
+                <S>Get-WUJob</S>
+                <S>Get-WULastResults</S>
+                <S>Get-WURebootStatus</S>
+                <S>Get-WUServiceManager</S>
+                <S>Get-WUSettings</S>
+                <S>Invoke-WUJob</S>
+                <S>Remove-WindowsUpdate</S>
+                <S>Remove-WUServiceManager</S>
+                <S>Set-WUSettings</S>
+                <S>Update-WUModule</S>
+                <S>Set-PSWUSettings</S>
+                <S>Reset-WUComponents</S>
+                <S>Get-WUOfflineMSU</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <S N="PowerShellGetFormatVersion"></S>
+      <S N="ReleaseNotes">_x000D__x000A_v2.2.1  - Set-WUSettings added params to control TargetRelease for control Feature Updates version and Windows Update for Business_x000D__x000A__x0009__x0009_- Fixed Remove-WindowsUpdate bug_x000D__x000A__x0009__x0009_- Fixed Get-WUHistory bug_x000D__x000A__x0009__x0009_- Fixed Get-WindowsUpdate sendreport bug_x000D__x000A__x0009__x0009_- Fixed Get-WindowsUpdate for Windows 11 H23H2 problem_x000D__x000A__x000D__x000A_v2.2.0  - New cmdlet Reset-WUComponents, for reset Windows Updates components to default_x000D__x000A__x0009__x0009_- New cmdlet Get-WUOfflineMSU, for download offline msu package from microsoft Update Catalog_x000D__x000A__x000D__x000A_v2.1.1  - Remove-WindowsUpdate added WU Api uninstallation mode_x000D__x000A__x0009__x0009_- Fixed bug with slow run cmdlets_x000D__x000A__x0009__x0009_- Added support for Office 365 users to send emails_x000D__x000A__x000D__x000A_v2.1.0  - New cmdlet Set-PSWUSettings, for save PSWUSettings to xml file_x000D__x000A__x0009__x0009_- Param -SendReport can use smtp server credentials_x000D__x000A__x0009__x0009_- Install-WindowsUpdate added -RecurseCycle param, to install next updates after reboot_x000D__x000A__x0009__x0009_- Install-WindowsUpdate added new pre search criteria: DeploymentAction, IsAssigned, IsPresent, BrowseOnly and AutoSelectOnWebSites_x000D__x000A__x0009__x0009_- Change location of PSWindowsUpdate.log file to $Env:TEMP_x000D__x000A__x0009__x0009_- Fixed Get-WULastResults bugs_x000D__x000A__x0009__x0009_- Fixed Remove-WUServiceManager bugs_x000D__x000A__x000D__x000A_v2.0.0 - Rewrite whole script module to binary module_x000D__x000A__x0009__x0009__x000D__x000A_Cmdlets maping for old module:_x000D__x000A_v1.6.x                  =&gt; v2.0.x_x000D__x000A_Add-WUOfflineSync       =&gt; Add-WUServiceManager_x000D__x000A_Add-WUServiceManager    =&gt; Add-WUServiceManager_x000D__x000A_-                       =&gt; Enable-WURemoting_x000D__x000A_Get-WUHistory           =&gt; Get-WUHistory_x000D__x000A_Get-WUList              =&gt; Get-WindowsUpdate_x000D__x000A_Get-WUInstall           =&gt; Download-WindowsUpdate  (or Get-WindowsUpdate -Download)_x000D__x000A_Get-WUInstall           =&gt; Install-WindowsUpdate   (or Get-WindowsUpdate -Install)_x000D__x000A_Hide-WUUpdate           =&gt; Hide-WindowsUpdate      (or Get-WindowsUpdate -Hide)_x000D__x000A_Get-WUInstallerStatus   =&gt; Get-WUInstallerStatus_x000D__x000A_Get-WURebootStatus      =&gt; Get-WURebootStatus_x000D__x000A_Get-WUServiceManager    =&gt; Get-WUServiceManager_x000D__x000A_Get-WUUninstall         =&gt; Remove-WindowsUpdate_x000D__x000A_Invoke-WUInstall        =&gt; Invoke-WUJob_x000D__x000A_-                       =&gt; Get-WUJob_x000D__x000A_Remove-WUOfflineSync    =&gt; Remove-WUServiceManager_x000D__x000A_Remove-WUServiceManager =&gt; Remove-WUServiceManager_x000D__x000A_Get-WUAPIVersion        =&gt; Get-WUAPIVersion_x000D__x000A_Get-WULastResults       =&gt; Get-WULastResults_x000D__x000A_Start-WUDetectNow       =&gt; -_x000D__x000A_Start-WUService         =&gt; -_x000D__x000A_Get-WUSettings          =&gt; Get-WUSettings_x000D__x000A_Set-WUSettings          =&gt; Set-WUSettings_x000D__x000A_Update-WUModule         =&gt; Update-WUModule</S>
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TNRef RefId="0" />
+        <MS>
+          <S N="NormalizedVersion">2.2.1.5</S>
+          <S N="IsPrerelease">False</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Omar Hany Kasban\Documents\PowerShell\Modules</S>
+    </MS>
+  </Obj>
+</Objs>
