@@ -61,7 +61,7 @@
     {
         "defaults": 
         {
-            "colorScheme": "Nord",
+            "colorScheme": "Nord Red",
             "font": 
             {
                 "face": "RobotoMono Nerd Font Mono",
@@ -230,6 +230,29 @@
             "selectionBackground": "#434C5E",
             "white": "#E5E9F0",
             "yellow": "#EBCB8B"
+        },
+        {
+              "background": "#2E1A1C",
+              "black": "#3B1F22",
+              "red": "#BF616A",
+              "green": "#A74D4D",
+              "yellow": "#E06C75",
+              "blue": "#BF616A",
+              "purple": "#D16D85",
+              "cyan": "#BF616A",
+              "white": "#E5BFC1",
+              "brightBlack": "#4C2C2F",
+              "brightRed": "#FF6B6B",
+              "brightGreen": "#D26767",
+              "brightYellow": "#F28F95",
+              "brightBlue": "#FF6B6B",
+              "brightPurple": "#FFA0B0",
+              "brightCyan": "#FF6B6B",
+              "brightWhite": "#FFE5E7",
+              "cursorColor": "#FF6B6B",
+              "foreground": "#F2D7D9",
+              "selectionBackground": "#47282B",
+              "name": "Nord Red"
         },
         {
             "background": "#300A24",
