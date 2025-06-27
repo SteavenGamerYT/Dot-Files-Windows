@@ -34,6 +34,13 @@ function git-push {
 }
 function cdgit($name) {
   Set-Location "$env:USERPROFILE\Documents\GitHub\$name"
+  ls
+}
+
+Remove-Item -Path alias:cd
+function cd($name) {
+  Set-Location "$name"
+  ls
 }
 
 function touch($file) {
