@@ -1,11 +1,20 @@
 # ⚙️ CONFIGURATION
-$refindDisk = 0
+# Refind
+$refindDisk = 1
 $refindPart = 1
-$windowsDisk = 4
-$windowsPart = 1
 $refindLetter = "A:"
-$windowsLetter = "B:"
 $refindName = "rEFInd Boot Manager"
+# Windows 11
+$windows11Disk = 5
+$windows11Part = 1
+$windows11Letter = "B:"
+$windows11Follder = "C:\Windows"
+# Windows 7
+$windows7Disk = 0
+$windows7Part = 1
+$windows7Letter = "W:"
+$windows7Follder = "F:\Windows"
+# Tools
 $easyuefi = "C:\Program Files\Hasleo\EasyUEFI\bin\EasyUEFIC.exe"
 
 function Mount-Partition($disk, $part, $letter) {
@@ -79,22 +88,40 @@ Unmount-Partition $refindLetter
 
 # =============================
 Write-Host "`n==============================="
-Write-Host "  [7] Mounting Windows EFI Partition as $windowsLetter"
+Write-Host "  [7] Mounting Windows 11 EFI Partition as $windows11Letter"
 Write-Host "==============================="
-Mount-Partition $windowsDisk $windowsPart $windowsLetter
+Mount-Partition $windows11Disk $windows11Part $windows11Letter
 
 Write-Host "`n==============================="
-Write-Host "  [8] Copying Windows Bootloader (no firmware sync)"
+Write-Host "  [8] Copying Windows 11 Bootloader (no firmware sync)"
 Write-Host "==============================="
-$bcdCommand = "bcdboot C:\Windows /s $windowsLetter /f UEFI /nofirmwaresync"
+$bcdCommand = "bcdboot $windows11Follder /s $windows11Letter /f ALL /nofirmwaresync"
+Invoke-Expression $bcdCommand
+
+Write-Host "`n==============================="
+Write-Host "  [9] Unmounting Windows 11 EFI Partition"
+Write-Host "==============================="
+Unmount-Partition $windows11Letter
+
+Write-Host "`n==============================="
+Write-Host "  [7] Mounting Windows 7 EFI Partition as $windows7Letter"
+Write-Host "==============================="
+Mount-Partition $windows7Disk $windows7Part $windows7Letter
+
+Write-Host "`n==============================="
+Write-Host "  [8] Copying Windows 7 Bootloader (no firmware sync)"
+Write-Host "==============================="
+$bcdCommand = "bcdboot $windows7Follder /s $windows7Letter /f ALL /nofirmwaresync"
 Invoke-Expression $bcdCommand
 
 Write-Host "`n==============================="
 Write-Host "  [9] Unmounting Windows EFI Partition"
 Write-Host "==============================="
-Unmount-Partition $windowsLetter
+Unmount-Partition $windows7Letter
 
 # ✅ Done
-Write-Host "`n==============================="
-Write-Host "  ✅ Done. rEFInd is now the default bootloader, Windows was added without touching boot order."
-Write-Host "==============================="
+Write-Host "`n==================================================================="
+Write-Host "  ✅ Done. rEFInd is now the default bootloader."
+Write-Host "  ✅ Done. Windows 11 boot files has been added to Its EFI Parttion."
+Write-Host "  ✅ Done. Windows 7 boot files has been added to Its EFI Parttion."
+Write-Host "====================================================================="
