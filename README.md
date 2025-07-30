@@ -6,7 +6,7 @@ My Dot Files From Windows 11
 
 ![](https://github.com/SteavenGamerYT/dot-files-windows/blob/main/Screenshots/2.png?raw=true)
 
-![](https://github.com/SteavenGamerYT/dot-files-windows/blob/main/Screenshots/3.png?raw=true)
+![](https://github.com/SteavenGamerYT/dot-files-windows/blob/main/Screenshots/windows.png?raw=true)
 
 
 `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`
