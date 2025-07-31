@@ -93,7 +93,8 @@
         },
         {
             "type": "disk",
-            "key": "  "
+            "key": "  ",
+            "format": "{mountpoint} {size-used} / {size-total} ({size-percentage}) - {filesystem}"
         },
         {
             "type": "memory",
