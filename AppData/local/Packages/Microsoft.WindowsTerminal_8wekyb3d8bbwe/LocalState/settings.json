@@ -82,8 +82,22 @@
                 "commandline": "%SystemRoot%\\System32\\cmd.exe /c ssh omarhanykasban@192.168.1.14",
                 "guid": "{e6eba005-c264-4887-8aeb-75c6ab480db5}",
                 "hidden": false,
-                "icon": "C:\\Users\\Omar Hany Kasban\\Documents\\GitHub\\Dot-Files-Windows\\Icons\\nixos.png",
-                "name": "NixOS (Host)"
+                "icon": "C:\\Users\\Omar Hany Kasban\\Documents\\GitHub\\Dot-Files-Windows\\Icons\\SteavenLinux.jpg",
+                "name": "SteavenLinux (Omar-PC)"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe /c ssh omarhanykasban@192.168.1.19",
+                "guid": "{81dc406e-3f27-4a75-b061-42e0f5b8997a}",
+                "hidden": false,
+                "icon": "C:\\Users\\Omar Hany Kasban\\Documents\\GitHub\\Dot-Files-Windows\\Icons\\SteavenLinux.jpg",
+                "name": "SteavenLinux (Omar-GamingLaptop-Ethernet)"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe /c ssh omarhanykasban@192.168.1.115",
+                "guid": "{00486cf3-66e1-40ac-98e1-474262c64691}",
+                "hidden": false,
+                "icon": "C:\\Users\\Omar Hany Kasban\\Documents\\GitHub\\Dot-Files-Windows\\Icons\\Debian.png",
+                "name": "Debian (Omar-Old-PC)"
             },
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
