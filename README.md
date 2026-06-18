@@ -51,4 +51,6 @@ rd /s /q "%USERPROFILE%\.glaze-wm"
 mklink /d "%USERPROFILE%\.glaze-wm" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\.glaze-wm"'
 rd /s /q "%APPDATA%\alacritty"
 mklink /d "%APPDATA%\alacritty" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\AppData\Roaming\alacritty"
+rd /s /q "%APPDATA%\mpv"
+mklink /d "%APPDATA%\mpv" "%USERPROFILE%\Documents\GitHub\Dot-Files-Windows\AppData\Roaming\mpv""
 ```
