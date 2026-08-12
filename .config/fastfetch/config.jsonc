@@ -91,11 +91,11 @@
             "key": "  ",
             "detectionMethod": "pci"
         },
-        {
-            "type": "disk",
-            "key": "  ",
-            "format": "{mountpoint} {size-used} / {size-total} ({size-percentage}) - {filesystem}"
-        },
+//        {
+//            "type": "disk",
+//            "key": "  ",
+//            "format": "{mountpoint} {size-used} / {size-total} ({size-percentage}) - {filesystem}"
+//        },
         {
             "type": "memory",
             "key": "  󰑭" 
