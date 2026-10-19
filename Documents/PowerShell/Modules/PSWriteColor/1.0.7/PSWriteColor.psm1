@@ -1,4 +1,4 @@
-﻿# PowerForge merged source begin 84a1b8f7a2ffd895184f82323942138f30be816f3b5fc7bafd3c971dd5ef76d5
+﻿# PowerForge merged source begin 34403dd8f2254b547a1e417b5b3adfaa6d102b0bef68b0e78c0d598ea9984457
 function Write-Color {
     <#
     .SYNOPSIS
@@ -63,6 +63,16 @@ function Write-Color {
 
     .PARAMETER NoConsoleOutput
     Switch to not output to console. Default all output goes to console.
+
+    .PARAMETER OutputStream
+    Destination for messages: Host (default), Output, Verbose, or Information.
+    Output emits one joined string per call on the success stream, so assignments
+    and pipelines capture these messages as data. Use it for Azure Automation job output.
+    Verbose and Information emit one joined text record per call and respect their
+    normal PowerShell preferences. Use -Verbose or -InformationAction Continue to display them.
+    ShowTime is supported; console colors, padding, indentation, blank lines, centering,
+    and NoNewLine apply only to Host. NoConsoleOutput suppresses any selected message
+    stream while retaining file logging. Only Output writes messages to success output.
 
     .PARAMETER HorizontalCenter
     Centers single-line text, including its padding, in the visible host window. Odd extra space goes on the right.
@@ -158,7 +168,8 @@ function Write-Color {
         [alias('PL')][ValidateRange(0, [int]::MaxValue)][int] $PadLeft = 0,
         [alias('PC')][ValidateRange(0, [int]::MaxValue)][int] $PadCenter = 0,
         [alias('PR')][ValidateRange(0, [int]::MaxValue)][int] $PadRight = 0,
-        [alias('PadChar')][char] $PadCharacter = ' '
+        [alias('PadChar')][char] $PadCharacter = ' ',
+        [ValidateSet('Host', 'Output', 'Verbose', 'Information')][string] $OutputStream = 'Host'
     )
     if (@($PadLeft, $PadCenter, $PadRight | Where-Object { $_ -gt 0 }).Count -gt 1) {
         throw 'Specify only one of PadLeft, PadCenter, or PadRight with a positive width.'
@@ -169,8 +180,23 @@ function Write-Color {
     $TextToFile = $Text -join ''
     # Handle Ignore at this boundary: Windows PowerShell 5.1 cannot pass an inherited
     # Ignore preference through to nested Write-Host calls.
-    $SuppressConsole = $NoConsoleOutput -or $PSBoundParameters['InformationAction'] -eq [System.Management.Automation.ActionPreference]::Ignore
-    if (-not $SuppressConsole) {
+    $SuppressConsole = $NoConsoleOutput -or $PSBoundParameters['InformationAction'] -eq [System.Management.Automation.ActionPreference]::Ignore -or $InformationPreference -eq [System.Management.Automation.ActionPreference]::Ignore
+    if (-not $NoConsoleOutput -and $OutputStream -ne 'Host') {
+        $Message = $TextToFile
+        if ($ShowTime) {
+            $Message = "[$([datetime]::Now.ToString($DateTimeFormat))] $Message"
+        }
+        if ($OutputStream -eq 'Output') {
+            Write-Output -InputObject $Message
+        }
+        elseif ($OutputStream -eq 'Verbose') {
+            Write-Verbose -Message $Message
+        }
+        elseif (-not $SuppressConsole) {
+            Write-Information -MessageData $Message -Tags 'WriteColor'
+        }
+    }
+    if (-not $SuppressConsole -and $OutputStream -eq 'Host') {
         if ($null -eq $Color -or $Color.Count -eq 0) {
             Write-Error 'Color must contain at least one foreground color.'
             return
@@ -293,7 +319,7 @@ function Write-Color {
         } until ($Saved -eq $true -or $Retry -ge $LogRetry)
     }
 }
-# PowerForge merged source end 84a1b8f7a2ffd895184f82323942138f30be816f3b5fc7bafd3c971dd5ef76d5
+# PowerForge merged source end 34403dd8f2254b547a1e417b5b3adfaa6d102b0bef68b0e78c0d598ea9984457
 
 $FunctionsToExport = @('Write-Color')
 $CmdletsToExport = @()
@@ -303,8 +329,8 @@ Export-ModuleMember -Function $FunctionsToExport -Alias $AliasesToExport -Cmdlet
 # SIG # Begin signature block
 # MIIt7AYJKoZIhvcNAQcCoIIt3TCCLdkCAQExDzANBglghkgBZQMEAgEFADB5Bgor
 # BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
-# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCDw++zUH4nuQq/s
-# dG44613kto8oRrtU2+352fAKH+9UxqCCJukwggWNMIIEdaADAgECAhAOmxiO+dAt
+# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCCMWGiZImlPdXO1
+# AAG32yFrHHHQKwE5nYu0aOqapgh5+KCCJukwggWNMIIEdaADAgECAhAOmxiO+dAt
 # 5+/bUOIIQBhaMA0GCSqGSIb3DQEBDAUAMGUxCzAJBgNVBAYTAlVTMRUwEwYDVQQK
 # EwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xJDAiBgNV
 # BAMTG0RpZ2lDZXJ0IEFzc3VyZWQgSUQgUm9vdCBDQTAeFw0yMjA4MDEwMDAwMDBa
@@ -517,33 +543,33 @@ Export-ModuleMember -Function $FunctionsToExport -Alias $AliasesToExport -Cmdlet
 # aW5nIFJTQTQwOTYgU0hBMzg0IDIwMjEgQ0ExAhAIUzrfhsM90FqXN2d2YAEVMA0G
 # CWCGSAFlAwQCAQUAoIGEMBgGCisGAQQBgjcCAQwxCjAIoAKAAKECgAAwGQYJKoZI
 # hvcNAQkDMQwGCisGAQQBgjcCAQQwHAYKKwYBBAGCNwIBCzEOMAwGCisGAQQBgjcC
-# ARUwLwYJKoZIhvcNAQkEMSIEIP+5NX+jXWyY0II4p1n2dxjvhQqdRwoA60xHnB9J
-# WxloMA0GCSqGSIb3DQEBAQUABIICAACF8xMJPz6XOJbHX/Xia7RZpB0HLWYcS1EK
-# IjV9/Zrojli+apsESrdCHOSGHXMZmfipFr4E64WqivoCb476Ediob5O7Ya9iLTjy
-# s6WLsqd3bBc0q/F+DXnKeCtS0PYv4kX6Nhm8u0XDNufJ8Q3aYqatzVWcfVAgGmZY
-# tdXQ+7CJ2PS+Erog2navcF8yhoKn+Di1JrvNn9skY/pNzomnBGvYo5pgoCzODG6N
-# DZemyLETOLzOYfLbiZd6D75/l2ycP4Jaqy9rjCkNQ76Oz3LLuB7ZEmEyq9P7WEeU
-# xRyDUs+e87RkQs1ickm8+3bHP6m5sSDeoiEGRV9sdInkM4awSuwW36BzTfqVnwb7
-# FU1bExt3COlEBPX2K+cIq4oZbYlqTQ3DnhF0fGLbJarNrMRDrqYpVhPC5yP3gi/e
-# KA7YT/Cvx8c56hx7I4HYJ6oIXHHmnuQSN6HrSZf6G6WhPL/KQoW4YHfi2zlGRzHl
-# GSJzylrFDeAgNmwa7bha03TDOo31wV6IDbyLu6i/rj17UHRbXW2dREtEVaIj3CMe
-# 0KsNgqh6zzhynKv5a0+rcXS9jdVt5I3gfJ8kyNSWhfTknXQGvXrcKwel2ouVHKdF
-# KDliKIoYZxtwKvXv5U36Bj0V1FaWPEPUFdVK5urLgdU4osORVii2O4/FZSo21z0z
-# XeB32lq8oYIDJjCCAyIGCSqGSIb3DQEJBjGCAxMwggMPAgEBMH0waTELMAkGA1UE
+# ARUwLwYJKoZIhvcNAQkEMSIEILwl4a2uNIRJ+FTSHO31BQdfZW7twUZpADNMaKOl
+# EzHRMA0GCSqGSIb3DQEBAQUABIICALGJ7ohb6tGqi0l8kVI4WDNd10+KWsKJQoFo
+# WbLrGszouLOLl5GWvSBE6S+qeyff9BJs9wpbFF6MY/7VYr2+OSdjWaGjV6X7qbcf
+# aH/bS2TrDypYHP1QxtrX0spRymdM6XHYLcvh90BlJEkGYKmTykCBKFHD5DOj/peF
+# Su3TbJLuOdlwy545LtcltV1jw9jOqBNFv1JwyIpVxLGYebPwV1b4WCCbihPGaEtH
+# k+JJXsXKfcmTAgxo9hN1Zr/vn29RMnmGFHS+Iv4iWcaH3y0LxaviCLYO8J/x9DJw
+# J6VyQ1E1aW2bq7NAmHBMWNXYwoXnOBD0HiIRjj+ZD/ShGImM+VDBMTyPHGDVeuMJ
+# eHNUd16c2uuaUSbxR+gRzrcFAw7IHqflQOnNGrdqETNGLOP8zaVA3VRoF/vrE4tU
+# gBPI3BSztsYudjkuRFtRfIItktvBJHLcgPvzf45O4iFbcQVcpfyiKSO3BJ6X11zw
+# /ki4Z1EINcoJ5sA3rq0560iIHNVSDd+48ruNQujXPwymPe0d6yKrx3APVBUCLpdD
+# et+7Db3Uu1/AVZrvnfw82tbRxr19VfnLkutyl7K3TjkfBb4r7KIbSesNqdKZd2bA
+# XZuCPV6jhzCfAm22DfIEZTGCxWfTcEiRsofyWkeEr5B0Kv4jW0RrapxsgCxQc7wt
+# 0T2/tjKZoYIDJjCCAyIGCSqGSIb3DQEJBjGCAxMwggMPAgEBMH0waTELMAkGA1UE
 # BhMCVVMxFzAVBgNVBAoTDkRpZ2lDZXJ0LCBJbmMuMUEwPwYDVQQDEzhEaWdpQ2Vy
 # dCBUcnVzdGVkIEc0IFRpbWVTdGFtcGluZyBSU0E0MDk2IFNIQTI1NiAyMDI1IENB
 # MQIQCE/cM09+RU7bww+P+ZIYNTANBglghkgBZQMEAgEFAKBpMBgGCSqGSIb3DQEJ
-# AzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTI2MDkyMDE2NTAxMlowLwYJ
-# KoZIhvcNAQkEMSIEIMu2OWgiy4yGKu0urSebRtf1WSi85BikHHH5yEfHp4+yMA0G
-# CSqGSIb3DQEBAQUABIICAKStSOkvUVTVKUsOcOY3rOBut4LaMEY8J4XQTKWrKoBZ
-# oIrcmvov0KzExYnVWvA+QaBfNihAbzq1KQAgX6H44xV4NwRFObmtYRLehYYzaVrC
-# rBN3UHhVamcX6TvOgwtmhY7/dlvomRERiJ7foUa/11aT5/fF/tHGX12dXAihiS1H
-# jEE+fz2RBEwqDd8FK1OFua27toZ0DHrjU32iMXNC4fJWWeKJkwyGQgkdGWNMJlPS
-# 1NMqzE9j58ELJWA7QhB/zGDdp0+KvMWzKXvMUZLpSuddz1faf1zGSpaVl8+zMaEf
-# o6ce15iCUgfENqSxWxQvE/qrvP6rSvqnRD4VFGgwObtmmZkCRYgcjRAI+PxWjScN
-# IQnnRVgCljglpNwb/6u41KlE1blNO1mI3uja/WJgF2Tshrz2AM6UsyHO4aWze+8v
-# 1NY45yPyOzyvuM3+XMXiApbX4DZjolXS3I754cfHHOS2SIx4pELQ+Bp7ovCXo/3y
-# TaPkdWPqPJFtjlLaXksa6R3BxBzu81YLjebLh8fIGU08zuYCZDxQBeq14jymWf2i
-# preyWgzkFSrf7Zj+Ex3L23/MobBKzkbSKzrhCBA7LbEOA48rWrZubUtquS64k4op
-# bJKYL3bBF/KDKp7LDjPv/ixAsPD/db7HuHOCtGu3t6DF288uEGzhrX8Eo7p3b4t1
+# AzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTI2MTAwNjEwMjEyNVowLwYJ
+# KoZIhvcNAQkEMSIEIPhdH0Gh9mZv5ONQoEapHRJ0X9cxWHg9vKRCH/7+EQO5MA0G
+# CSqGSIb3DQEBAQUABIICAC+167EboxQXbdwCngHJdpg4WYAztgpEs4J0u2+MjHUJ
+# jT5L1YMWhW4BXG3v+ystp/295mkDCPhqXTp5CwcDRhTWcDXtej9LxtR4cDDWLS8O
+# QFeP08rLsGIi+465B4XxPB6/gPBVLvVWgxquNUxUepWGx7XZ75K7PgB5C6URg0EG
+# tCiW35ZMCV9U6uqykOHL4Ga/+4BP35kLkrZdsu8KGthtUbyolEXWhtf6veO5m3GG
+# kexGeJq/zBnUD1Tmtrl4D0pT+0Y/gVp8PSlbzsHDF/eL2rPRh6Sn0SZXIr1qz70D
+# dks4M1RjYzfPaA/zicV+ptr3VOyRoMAwju0BPRBOreCThvSBIdQ6tcYc2ajfy3O/
+# CZs2B6UO//pk2WT937CNZ2UiE8di9xNM0eCt/7/ZjI5T10ypmOBcUiENFHS7GlqN
+# BmxPJC+c9oukX8j58x2kF9s29OOXLFtND2aRr0QNg8aTrTYIxY9pDHBQyNbITZOC
+# uKdOj2+8RbC3lsJhCC19sP4TvXYefmOqJmys/HiL02tso+c+v0wbV6CKrBaWm6/Z
+# bsmwBp1IWqHOtxxRSDNEa7W+cnRpzTrUd4e7JAwxo2dmznXPKPvIGkW/W78iaQ1C
+# 1yYeJv3rXxF9v9HTO4Ytpdvk4mtFlGpKA76eQeH16JCdWO1sHz/NvzTMTboolOxL
 # SIG # End signature block
