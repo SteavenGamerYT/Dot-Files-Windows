@@ -2,7 +2,9 @@ Invoke-Expression (&starship init powershell)
 Set-Location $env:USERPROFILE
 
 # Import Terminal Icons
-Import-Module -Name Terminal-Icons
+if (Get-Command -Name Import-PowerShellDataFile -ErrorAction SilentlyContinue) {
+    Import-Module -Name Terminal-Icons -ErrorAction SilentlyContinue
+}
 
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.

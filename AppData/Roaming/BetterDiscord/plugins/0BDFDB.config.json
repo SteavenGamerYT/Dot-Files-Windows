@@ -1,10 +1,64 @@
 {
 	"all": {
+		"ClassModuleCache": {
+			"AccountDetailsButtons": "484555",
+			"AppMount": "300923",
+			"AppOuter": "349805",
+			"Avatar": "185864",
+			"Badge": "306091",
+			"Button": "211182",
+			"ChannelTextAreaButton": "257100",
+			"ChatWindow": "999900",
+			"Flex": "859510",
+			"FlowerStar": "719639",
+			"GuildFolder": "327580",
+			"GuildItem": "260727",
+			"GuildsWrapper": "987566",
+			"Heading": "731466",
+			"Input": "151167",
+			"ItemLayerContainer": "38112",
+			"Margins": "221851",
+			"Menu": "798819",
+			"MessageBody": "318626",
+			"MessageToolbarItems": "738745",
+			"MessagesPopoutTabBar": "113164",
+			"Modal": "268814",
+			"ModalNew": "592551",
+			"ModalSub": "978843",
+			"NameContainerState": "471011",
+			"NameTag": "646810",
+			"Notice": "934966",
+			"NoticePlatform": "971656",
+			"PeopleItemButton": "592835",
+			"PeopleItemInfo": "160305",
+			"PeopleItemUser": "803790",
+			"Peoples": "415017",
+			"PeoplesNowPlayingMember": "942813",
+			"PictureInPicture": "155819",
+			"PrivateChannel": "763097",
+			"Scroller": "6095",
+			"SearchBar": "358983",
+			"SettingsItems": "715965",
+			"Slider": "77232",
+			"Tooltip": "233680",
+			"TooltipGuild": "785332",
+			"UserHeaderUsername": "956495",
+			"UserPopoutBody": "211450",
+			"UserSummaryItem": "76145"
+		},
+		"ModuleIdCache": {
+			"AnalyticsContext": "820284",
+			"DiscordTag": "297413",
+			"EmojiPickerListRow": "969602",
+			"Menu": "980707",
+			"PeopleListItem": "414711",
+			"PeopleListSectionedLazy": "530889",
+			"PeopleListSectionedNonLazy": "530889",
+			"TabBar": "761508"
+		},
 		"changeLogs": {
-			"BDFDB": "3.5.8",
-			"NotificationSounds": "3.8.8",
-			"SplitLargeMessages": "1.8.1",
-			"SpotifyControls": "1.3.9"
+			"BDFDB": "4.5.8",
+			"BetterFriendList": "1.7.2"
 		},
 		"choices": {
 			"toastPosition": "right"
@@ -12,12 +66,13 @@
 		"general": {
 			"shareData": true,
 			"showToasts": true,
+			"checkForUpdates": false,
 			"showSupportBadges": false,
 			"useChromium": false
 		},
 		"hashes": {
-			"0BDFDB.data.json": "4ea1ccd6a3446153cfb389980665a35cc0ef1a3a",
-			"0BDFDB.raw.css": "8c083e2a87a82aded5f3b2e27fb8b2f816b5f74a"
+			"0BDFDB.data.json": "adf6d3dc75fb34a74b73d38e5cbc3afa2ba13616",
+			"0BDFDB.raw.css": "b4bc90405cbf0cf08a5dd049c7dc2bc705ef2079"
 		}
 	}
 }

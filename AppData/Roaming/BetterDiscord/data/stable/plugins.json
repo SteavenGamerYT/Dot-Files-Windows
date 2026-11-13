@@ -1,7 +1,7 @@
 {
     "BDFDB": true,
-    "ZeresPluginLibrary": true,
-    "FreeEmojis": true,
+    "ZeresPluginLibrary": false,
+    "FreeEmojis": false,
     "NoSpotifyPause": false,
     "NotificationSounds": false,
     "SpotifyControls": false,
@@ -9,5 +9,6 @@
     "TypingIndicator": false,
     "TypingUsersAvatars": false,
     "BugReportHelper": false,
-    "SplitLargeMessages": true
+    "SplitLargeMessages": false,
+    "BetterFriendList": true
 }
